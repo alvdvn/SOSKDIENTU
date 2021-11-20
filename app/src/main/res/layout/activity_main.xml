@@ -4,84 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MainActivity"
-    android:orientation="vertical"
     android:layout_centerVertical="false"
+    android:background="@drawable/background_layout"
     android:gravity="center"
-    android:background="@drawable/background_layout">
-
-    <LinearLayout
-        android:layout_width="861dp"
-        android:layout_height="1452dp"
-        android:background="@drawable/bogoc"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="493dp"
-            android:layout_height="436dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="90dp"
-            android:background="@drawable/image_circle"
-            app:srcCompat="@drawable/logologin" />
-
-        <EditText
-            android:id="@+id/Username"
-            android:layout_width="627dp"
-            android:layout_height="115dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/edt_style"
-            android:gravity="center"
-            android:hint="Username"
-            android:minHeight="48dp"
-            android:textSize="20pt" />
-
-        <EditText
-            android:id="@+id/Password"
-            android:layout_width="627dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/edt_style"
-            android:gravity="center"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:minHeight="48dp"
-            android:textSize="20pt" />
-
-        <LinearLayout
-            android:layout_marginTop="60dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btnlogin"
-                android:layout_width="268dp"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="50dp"
-                android:padding="30dp"
-                android:textSize="20dp"
-                android:text="Đăng nhập"
-                 />
-
-            <Button
-                android:id="@+id/btnsigin"
-                android:layout_width="258dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="50dp"
-                android:padding="30dp"
-                android:textSize="20dp"
-                android:text="Đăngký"
-                />
-
-        </LinearLayout>
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
 
 
 
-    </LinearLayout>
+
+
 
 
 </LinearLayout>
