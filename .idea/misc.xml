@@ -5,10 +5,11 @@
       <map>
         <entry key="..\:/SOSKDIENTU/app/src/main/res/drawable/background_layout.xml" value="0.13914473684210527" />
         <entry key="..\:/SOSKDIENTU/app/src/main/res/drawable/bogoc.xml" value="0.2203125" />
-        <entry key="..\:/SOSKDIENTU/app/src/main/res/layout/activity_home.xml" value="0.10869565217391304" />
+        <entry key="..\:/SOSKDIENTU/app/src/main/res/drawable/bogocbtn.xml" value="0.1326388888888889" />
+        <entry key="..\:/SOSKDIENTU/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/SOSKDIENTU/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/SOSKDIENTU/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/SOSKDIENTU/app/src/main/res/layout/activity_signin.xml" value="0.1" />
+        <entry key="..\:/SOSKDIENTU/app/src/main/res/layout/activity_signin.xml" value="0.16" />
       </map>
     </option>
   </component>
