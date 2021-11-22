@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.khaibaoyte.man2">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:text="Tờ Khai Y Tế"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="31dp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Họ Tên"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="261dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Năm Sinh"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="354dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số CCCD"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="242dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="447dp" />
+
+    <TextView
+        android:id="@+id/txtQuoctich"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quốc Tịch"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="428dp" />
+
+    <EditText
+        android:id="@+id/Quoctich"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nơi Ở Hiện Tại"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="335dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="85dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SĐT"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="428dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trong vòng 14 ngày có đi qua khu vực/lãnh  thổ nào không ? "
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="516dp" />
+
+    <RadioGroup
+        android:id="@+id/radiobtn1"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@+id/radiobtnCo1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="0"
+            android:text="Có" />
+
+        <RadioButton
+            android:id="@+id/radiobtnkhong1"
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:text="Không" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trong vòng 14 ngày có dấu hiệu hô, sốt, khó thở,... không ? "
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="616dp" />
+
+    <RadioGroup
+        android:id="@+id/radiobtn2"
+        android:layout_width="297dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="30dp"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@+id/radiobtnCo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Có" />
+
+        <RadioButton
+            android:id="@+id/radiobtnKhong2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Không" />
+    </RadioGroup>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+       <Button
+           android:id="@+id/btnXoa"
+           android:layout_width="125dp"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="16dp"
+           android:backgroundTint="#D63BE1"
+           android:drawableLeft="@drawable/ic_baseline_save_24"
+           android:text="Xóa Tờ Khai " />
+
+       <Button
+           android:id="@+id/btngui"
+           android:layout_width="120dp"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="50dp"
+           android:backgroundTint="#CF3CDA"
+           android:drawableLeft="@drawable/ic_baseline_cancel_24"
+           android:text="Gửi Tờ Khai" />
+   </LinearLayout>
+</LinearLayout>
+
+
+

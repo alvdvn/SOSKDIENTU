@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SOSKDIENTU">
         <activity
+            android:name=".activity.khaibaoyte.man3"
+            android:exported="false" />
+        <activity
+            android:name=".activity.khaibaoyte.man2"
+            android:exported="false" />
+        <activity
             android:name=".activity.khaibaoyte.man1"
             android:exported="false" />
         <activity
@@ -20,7 +26,7 @@
             android:exported="false" />
         <activity
             android:name=".activity.LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activity.HomeActivity"
             android:exported="false" />

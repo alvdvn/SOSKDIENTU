@@ -5,12 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.soskdientu.R;
 
-public class man1 extends AppCompatActivity {
+public class man3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_man1);
-
+        setContentView(R.layout.activity_man3);
     }
 }
