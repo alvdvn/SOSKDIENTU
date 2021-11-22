@@ -29,7 +29,13 @@
             android:exported="true" />
         <activity
             android:name=".activity.HomeActivity"
-            android:exported="false" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activity.ChaoActivity"
             android:exported="true" />
@@ -45,11 +51,7 @@
         <activity
             android:name=".activity.TiemChung.MainActivity1"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
