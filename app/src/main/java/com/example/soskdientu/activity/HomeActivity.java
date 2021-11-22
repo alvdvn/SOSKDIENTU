@@ -22,10 +22,10 @@ public class HomeActivity extends AppCompatActivity {
         ViewpagerAdapter adpter = new ViewpagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(adpter);
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setIcon(R.drawable.home);
-        tabLayout.getTabAt(1).setIcon(R.drawable.lich);
-        tabLayout.getTabAt(2).setIcon(R.drawable.thongbao);
-        tabLayout.getTabAt(3).setIcon(R.drawable.hosocn);
+        tabLayout.getTabAt(0).setIcon(R.drawable.home1);
+        tabLayout.getTabAt(1).setIcon(R.drawable.lich1);
+        tabLayout.getTabAt(2).setIcon(R.drawable.chuong5);
+        tabLayout.getTabAt(3).setIcon(R.drawable.nguoidung1);
 
     }
 }
