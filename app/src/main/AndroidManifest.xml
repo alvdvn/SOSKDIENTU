@@ -19,19 +19,19 @@
             android:name=".activity.khaibaoyte.man1"
             android:exported="false" />
         <activity
-            android:name=".activity.HososuckhoeMainActivity"
+            android:name=".activity.HoSoSucKhoe.Hososuckhoe"
             android:exported="true" />
         <activity
-            android:name=".activity.SigninActivity"
+            android:name=".activity.Dangnhap_Dawngky.SigninActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LoginActivity"
+            android:name=".activity.Dangnhap_Dawngky.LoginActivity"
             android:exported="true" />
         <activity
             android:name=".activity.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.ChaoActivity"
             android:exported="true" />
         <activity
             android:name=".activity.TiemChung.PhieuDongYActivity"
