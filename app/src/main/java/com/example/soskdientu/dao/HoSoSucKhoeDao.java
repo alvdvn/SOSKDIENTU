@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.soskdientu.model.HoSoSucKhoe;
-import com.example.soskdientu.mysqlite.MySQLite;
+import com.example.soskdientu.database.MySQLite;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.soskdientu.mysqlite;
+package com.example.soskdientu.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

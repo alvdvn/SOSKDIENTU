@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "683067482541",
+    "project_id": "soskdientu-18b04",
+    "storage_bucket": "soskdientu-18b04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683067482541:android:c5cee7abd67edb7ea24124",
+        "android_client_info": {
+          "package_name": "com.example.soskdientu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "683067482541-8vkk3hoggcvcbho39pv8rdotharmt6cn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0DxYghvA6nLk-W8Jhw5elZ4AEWEjZE4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "683067482541-8vkk3hoggcvcbho39pv8rdotharmt6cn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
