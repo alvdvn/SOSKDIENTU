@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".activity.TiemChung.DangKyTiemChungActivity">
+    tools:context=".activity.TiemChung.PhanUngSauTiemActivity"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
@@ -13,8 +13,7 @@
         android:id="@+id/hoten"
         android:hint="Ho ten"
         android:layout_marginLeft="10dp"
-
-        />
+        android:layout_marginTop="10dp" />
     <EditText
         android:id="@+id/edit1"
         android:layout_marginLeft="10dp"
@@ -24,54 +23,21 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ngaysinh"
-        android:hint="Ngay sinh"
+        android:id="@+id/TenVacXin"
+        android:hint="Ten Vacxin"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp" />
     <EditText
         android:id="@+id/edit2"
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="datetime"/>
-
-    <TextView
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="Gioi tinh"
-        android:textColor="@color/black"
-        android:textSize="15dp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup_diffLevel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="30dp">
-
-
-        <RadioButton
-            android:id="@+id/radioButton_easy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:text="Nam" />
-
-        <RadioButton
-            android:id="@+id/radioButton_medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:text="Nữ" />
-    </RadioGroup>
+        android:layout_height="wrap_content" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/So_CMND"
-        android:hint="So CMND"
+        android:id="@+id/ngayTiem"
+        android:hint="Ngay Tiem"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp" />
     <EditText
@@ -79,14 +45,13 @@
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:inputType="number"/>
+        android:inputType="datetime"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/BHYT"
-        android:hint="So the BHYT (neu co)"
+        android:id="@+id/Thoigian"
+        android:hint="Thoi gian xay ra phan ung"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp" />
     <EditText
@@ -94,14 +59,14 @@
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:inputType="number"/>
+        android:inputType="datetime"/>
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/DiaChi"
-        android:hint="Dia chi lien he"
+        android:id="@+id/NoiDung"
+        android:hint="Noi dung phan ung"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp" />
     <EditText
@@ -109,13 +74,14 @@
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp" />
+        android:lines="3"
+        android:maxLines="7"/>
 
     <Button
-        android:id="@+id/btnTST"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tiếp theo"
-        android:layout_marginLeft="250dp"/>
+        android:layout_marginLeft="250dp"
+        android:text="Xac nhan"/>
+
 
 </LinearLayout>

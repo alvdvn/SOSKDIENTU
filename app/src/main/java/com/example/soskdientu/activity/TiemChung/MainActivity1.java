@@ -30,6 +30,13 @@ public class MainActivity1 extends AppCompatActivity {
             }
         });
 
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(MainActivity1.this,PhanUngSauTiemActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

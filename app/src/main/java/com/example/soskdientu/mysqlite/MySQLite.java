@@ -15,6 +15,10 @@ public class MySQLite extends SQLiteOpenHelper {
                 "hoTen TEXT NOT NULL, namSinh TEXT NOT NULL,diaChi TEXT NOT NULL,gioiTinh TEXT NOT NULL,soDienThoai TEXT NOT NULL, " +
                 "soCanCuoc TEXT NOT NULL,nhietDo TEXT NOT NULL, huyetAp TEXT NOT NULL )";
         db.execSQL(create_HoSoSucKhoe);
+
+        String create_DangKyTiemChung = "CREATE TABLE DangKyTiemChung ( hoTen TEXT NOT NULL, ngaySinh DATE NOT NULL, diaChi TEXT NOT NULL," +
+                "gioiTinh TEXT NOT NULL, soBHYT INTEGER NOT NULL, soCMND INTEGER NOT NULL )";
+        db.execSQL(create_DangKyTiemChung);
     }
 
     @Override
@@ -22,4 +26,6 @@ public class MySQLite extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS HoSoSucKhoe");
 
     }
+
+
 }

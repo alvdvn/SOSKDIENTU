@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    android:id="@+id/carview"
+    android:layout_margin="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_hotenTV"
+            android:text="Họ tên:"
+            android:textColor="#050505"
+            android:textStyle="bold"
+            android:padding="3dp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_ngaysinh"
+            android:text="Ngày tháng năm sinh:"
+            android:layout_below="@+id/tv_hotenTV"
+            android:textColor="#2196F3"
+            android:textStyle="bold"
+            android:padding="3dp"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_diachi"
+            android:text="Địa chỉ:"
+            android:layout_below="@+id/tv_ngaysinh"
+            android:textColor="#009688"
+            android:textStyle="bold"
+            android:padding="3dp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_gioitinh"
+            android:text="Giới tính:"
+            android:layout_below="@+id/tv_diachi"
+            android:textColor="#FFEB3B"
+            android:textStyle="bold"
+            android:padding="3dp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_BHYT"
+            android:text="So BHYT: "
+            android:layout_below="@+id/tv_gioitinh"
+            android:textColor="#673AB7"
+            android:textStyle="bold"
+            android:padding="3dp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_CMND"
+            android:text="So CMND: "
+            android:layout_below="@+id/tv_BHYT"
+            android:textColor="#673AB7"
+            android:textStyle="bold"
+            android:padding="3dp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/img_delete_thanhvien"
+            android:layout_width="50dp"
+            android:src="@drawable/ic_close"
+            android:layout_alignParentRight="true"
+            android:layout_height="50dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

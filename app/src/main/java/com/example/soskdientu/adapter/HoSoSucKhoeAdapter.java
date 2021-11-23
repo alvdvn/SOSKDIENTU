@@ -70,7 +70,6 @@ public class HoSoSucKhoeAdapter extends RecyclerView.Adapter<HoSoSucKhoeAdapter.
         holder.cc.setText("Số căn cước: " + khoe.getSoCanCuoc());
         holder.nd.setText("Nhiệt độ: " + khoe.getNhietDo());
         holder.ha.setText("Huyết áp: " + khoe.getHuyetAp());
-
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
