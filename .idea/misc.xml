@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_hososuckhoe.xml" value="0.1947463768115942" />
+        <entry key="..\:/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_phan_ung_sau_tiem.xml" value="0.1947463768115942" />
+        <entry key="..\:/GitHub/SOSKDIENTU/app/src/main/res/layout/fragment_dat_lich.xml" value="0.1947463768115942" />
+        <entry key="..\:/GitHub/SOSKDIENTU/app/src/main/res/layout/fragment_ho_so_ca_nhan.xml" value="0.1947463768115942" />
+        <entry key="..\:/GitHub/SOSKDIENTU/app/src/main/res/layout/fragment_home.xml" value="0.1947463768115942" />
         <entry key="..\:/SOSKDIENTU/app/src/main/res/drawable/background_layout.xml" value="0.13914473684210527" />
         <entry key="..\:/SOSKDIENTU/app/src/main/res/drawable/bogoc.xml" value="0.2203125" />
         <entry key="..\:/SOSKDIENTU/app/src/main/res/drawable/bogocbtn.xml" value="0.1326388888888889" />
@@ -20,8 +25,11 @@
         <entry key="..\:/Users/ACER/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/item_dangkytiemchung.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/ACER/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/item_hososuckhoe.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/Pc/Documents/GitHub/SOSKDIENTU/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2640625" />
+        <entry key="..\:/Users/Pc/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_home.xml" value="0.14221014492753623" />
         <entry key="..\:/Users/Pc/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_hososuckhoe_main.xml" value="0.13768115942028986" />
         <entry key="..\:/Users/Pc/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/dialog_hososuckhoe.xml" value="0.13768115942028986" />
+        <entry key="..\:/Users/Pc/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/Pc/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/item_dangkytiemchung.xml" value="0.14221014492753623" />
       </map>
     </option>
   </component>

@@ -29,6 +29,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".activity.Dangnhap_Dawngky.SigninActivity"
@@ -39,6 +40,7 @@
         <activity
             android:name=".activity.HomeActivity"
             android:exported="true">
+
 
         </activity>
         <activity
