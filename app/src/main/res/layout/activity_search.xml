@@ -26,14 +26,12 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.SearchView
-            android:layout_width="376dp"
+            android:id="@+id/searchview"
+            android:layout_width="281dp"
             android:layout_height="34dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:background="@drawable/searchview"
-
-            >
-
+            android:background="@drawable/searchview">
 
 
         </androidx.appcompat.widget.SearchView>
@@ -46,7 +44,9 @@
             android:layout_marginTop="30dp"
             android:textStyle="bold"/>
 
+
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleview"
             android:layout_width="369dp"
             android:layout_height="500dp"
             android:layout_gravity="center"

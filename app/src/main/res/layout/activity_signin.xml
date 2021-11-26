@@ -19,19 +19,21 @@
         android:textStyle="bold"
         />
     <EditText
+
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
         android:id="@+id/Sdt"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Số Điện Thoại "
+        android:inputType="phone"
         android:background="@drawable/edt_style"
         />
 
     <EditText
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:id="@+id/Password"
+        android:id="@+id/Password1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"

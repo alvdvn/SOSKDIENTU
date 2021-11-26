@@ -37,7 +37,8 @@
             android:gravity="center"
             android:hint="Username"
             android:minHeight="48dp"
-            android:textSize="20pt" />
+            android:textSize="20pt"
+            android:inputType="phone"/>
 
         <EditText
             android:id="@+id/Password"

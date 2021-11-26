@@ -28,10 +28,7 @@ public class HomeActivity extends AppCompatActivity {
         tabLayout.getTabAt(1).setIcon(R.drawable.lich1);
         tabLayout.getTabAt(2).setIcon(R.drawable.chuong5);
         tabLayout.getTabAt(3).setIcon(R.drawable.nguoidung1);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
 
-        myRef.setValue("Hello, World!");
 
     }
 }
