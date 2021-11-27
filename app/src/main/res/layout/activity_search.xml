@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DatLichKham.SearchActivity"
+    android:background="@drawable/background_layout"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Tìm kiếm bệnh viện"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="16pt"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:background="@drawable/bogocbtn"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchview"
+            android:layout_width="281dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/searchview">
+
+
+        </androidx.appcompat.widget.SearchView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Danh sách cơ sở y tế:"
+            android:textSize="11pt"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleview"
+            android:layout_width="369dp"
+            android:layout_height="500dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp" />
+    </LinearLayout>
+
+
+</LinearLayout>
