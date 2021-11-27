@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.soskdientu">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SOSKDIENTU">
+        <activity
+            android:name=".activity.camnangyte.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.camnangyte.CamnangyteActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activity.DatLichKham.SearchActivity"
             android:exported="false" />
@@ -26,26 +40,18 @@
             android:exported="false" />
         <activity
             android:name=".activity.HoSoSucKhoe.Hososuckhoe"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activity.Dangnhap_Dawngky.SigninActivity"
             android:exported="false" />
         <activity
             android:name=".activity.Dangnhap_Dawngky.LoginActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.HomeActivity"
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".activity.HomeActivity"
+            android:exported="true" />
         <activity
             android:name=".activity.ChaoActivity"
             android:exported="true" />
@@ -60,7 +66,7 @@
             android:exported="false" />
         <activity
             android:name=".activity.TiemChung.MainActivity1"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
