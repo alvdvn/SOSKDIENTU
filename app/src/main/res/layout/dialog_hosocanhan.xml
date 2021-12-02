@@ -6,12 +6,21 @@
     android:layout_margin="16dp"
     android:padding="8dp">
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#D541C1"
         android:gravity="center"
-        android:text="Hồ Sơ Sức Khỏe "
+        android:text="Hồ Sơ Cá Nhân "
         android:textColor="#F9FAFB"
         android:textSize="20dp"
         android:textStyle="bold" />
@@ -105,11 +114,11 @@
         android:layout_marginTop="3dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ed_nhietdo"
+            android:id="@+id/ed_sobaohiemyte"
             android:layout_width="match_parent"
             android:inputType="number"
             android:layout_height="wrap_content"
-            android:hint="Nhiệt độ" />
+            android:hint="Số Bảo Hiểm Y tế" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -118,12 +127,53 @@
         android:layout_marginTop="3dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/ed_huyetap"
+            android:id="@+id/ed_tgtungay"
             android:layout_width="match_parent"
             android:inputType="number"
             android:layout_height="wrap_content"
-            android:hint="Huyết áp" />
+            android:hint="Thời Hạn từ ngày" />
     </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_tgdenngay"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:hint="Thời Hạn đến ngày" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_quoctich"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:hint="Quốc tịch" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ed_tongiao"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:hint="Tôn Giáo" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -149,7 +199,8 @@
             android:drawableLeft="@drawable/ic_baseline_cancel_24"
             android:text="Hủy" />
     </LinearLayout>
-
+        </LinearLayout>
+    </ScrollView>
 
 
 

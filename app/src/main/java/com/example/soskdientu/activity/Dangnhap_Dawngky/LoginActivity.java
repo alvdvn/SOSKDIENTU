@@ -11,7 +11,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.soskdientu.R;
+import com.example.soskdientu.activity.CaNhanActivity;
 import com.example.soskdientu.activity.HomeActivity;
+import com.example.soskdientu.model.CaNhan;
 import com.example.soskdientu.model.Nguoidung;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,24 +28,22 @@ public class LoginActivity extends AppCompatActivity {
     EditText User,Pass;
     Button btnlogin,btnsigin;
     List<Nguoidung> listnd;
+    List<CaNhan> listcn = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         listnd = new ArrayList<>();
+        listcn = new ArrayList<>();
         anhxa();
-        getlistuser();
+
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             boolean check =   Checktknd(User.getText().toString(),Pass.getText().toString());
-             if (check == true){
-                 Toast.makeText(getApplicationContext(),"Đăng nhập thành công",Toast.LENGTH_SHORT).show();;
-                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                 startActivity(intent);
-             }else{
-                 Toast.makeText(getApplicationContext(), "Đăng nhạp thất bại , vui lòng kiểm tra lại số điện thoại hoặc mật khẩu", Toast.LENGTH_SHORT).show();
-             }
+                String us = User.getText().toString();
+                String ps = Pass.getText().toString();
+                getlistuser(us,ps);
+
             }
         });
         btnsigin.setOnClickListener(new View.OnClickListener() {
@@ -73,15 +73,32 @@ public class LoginActivity extends AppCompatActivity {
             }
         }return check;
     }
-    private void getlistuser(){
+    private void getlistuser(String user1, String pass1){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myreb = database.getReference("user");
+        DatabaseReference myreb = database.getReference("user/"+user1);
         myreb.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot:snapshot.getChildren()){
                     Nguoidung nguoidung1 = dataSnapshot.getValue(Nguoidung.class);
+
                     listnd.add(nguoidung1);
+
+
+                }
+                if (Checktknd(user1,pass1)==true){
+                    Toast.makeText(getApplicationContext(),"Đăng nhập thành công",Toast.LENGTH_SHORT).show();;
+                    if(listcn.size()==0){
+                        Intent intent = new Intent(LoginActivity.this, CaNhanActivity.class);
+                        intent.putExtra("sdt",user1);
+                        startActivity(intent);
+                    }else{
+                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                        intent.putExtra("sdt",user1);
+                        startActivity(intent);
+                    }
+                }else{
+                    Toast.makeText(getApplicationContext(), "Đăng nhạp thất bại , vui lòng kiểm tra lại số điện thoại hoặc mật khẩu", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -94,4 +111,5 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
+
 }

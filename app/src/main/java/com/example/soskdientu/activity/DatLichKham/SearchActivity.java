@@ -5,10 +5,8 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
 
 import com.example.soskdientu.R;
-import com.example.soskdientu.model.CSYT;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +14,7 @@ import java.util.List;
 public class SearchActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     SearchView searchView;
-    List<CSYT> mcsyt;
+//    List<CSYT> mcsyt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +22,7 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
         recyclerView = findViewById(R.id.recycleview);
         searchView = findViewById(R.id.searchview);
-        mcsyt = new ArrayList<>();
+//        mcsyt = new ArrayList<>();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -40,11 +38,16 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     private void filter(String newText) {
-        List<CSYT> fillterlist = new ArrayList<>();
-        for(CSYT x :mcsyt){
-            if (x.getName().toLowerCase().contains(newText.toLowerCase())){
-                fillterlist.add(x);
+//        List<CSYT> fillterlist = new ArrayList<>();
+//        for(CSYT x :mcsyt){
+//            if (x.getName().toLowerCase().contains(newText.toLowerCase())){
+//                fillterlist.add(x);
             }
         }
-    }
-}
+
+
+
+
+
+
+

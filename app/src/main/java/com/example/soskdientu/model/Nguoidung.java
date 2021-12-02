@@ -1,30 +1,29 @@
 package com.example.soskdientu.model;
 
 public class Nguoidung {
-    String Username;
-    String Password;
+    String username, password;
 
     public Nguoidung() {
     }
 
     public Nguoidung(String username, String password) {
-        Username = username;
-        Password = password;
+        this.username = username;
+        this.password = password;
     }
 
     public String getUsername() {
-        return Username;
+        return username;
     }
 
     public void setUsername(String username) {
-        Username = username;
+        this.username = username;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
     }
 }

@@ -15,19 +15,13 @@ import android.widget.Toast;
 
 import com.example.soskdientu.R;
 import com.example.soskdientu.model.Nguoidung;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class SigninActivity extends AppCompatActivity {
@@ -97,7 +91,7 @@ public class SigninActivity extends AppCompatActivity {
                 }
 
                 Nguoidung  user = new Nguoidung(sodt,mk);
-                myreb.child(user.getUsername()).setValue(user, new DatabaseReference.CompletionListener() {
+                myreb.child(user.getUsername()).child(user.getUsername()).setValue(user, new DatabaseReference.CompletionListener() {
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                         Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_SHORT).show();
