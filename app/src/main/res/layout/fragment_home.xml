@@ -217,13 +217,13 @@
                     android:id="@+id/dktiemchung"
                     android:layout_width="100dp"
                     android:layout_height="110dp"
-                    android:layout_marginLeft="35dp"
+                    android:layout_marginLeft="55dp"
                     android:src="@drawable/dangkytiemchung" />
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="35dp"
+                    android:layout_marginLeft="55dp"
                     android:gravity="center"
                     android:text="Đăng ký tiêm chủng" />
 

@@ -88,15 +88,11 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 if (Checktknd(user1,pass1)==true){
                     Toast.makeText(getApplicationContext(),"Đăng nhập thành công",Toast.LENGTH_SHORT).show();;
-                    if(listcn.size()==0){
-                        Intent intent = new Intent(LoginActivity.this, CaNhanActivity.class);
-                        intent.putExtra("sdt",user1);
-                        startActivity(intent);
-                    }else{
+
                         Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                         intent.putExtra("sdt",user1);
                         startActivity(intent);
-                    }
+
                 }else{
                     Toast.makeText(getApplicationContext(), "Đăng nhạp thất bại , vui lòng kiểm tra lại số điện thoại hoặc mật khẩu", Toast.LENGTH_SHORT).show();
                 }
@@ -111,5 +107,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
+
 
 }

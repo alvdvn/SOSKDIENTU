@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.soskdientu.R;
+import com.example.soskdientu.activity.CaNhanActivity;
 import com.example.soskdientu.model.Nguoidung;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -95,7 +96,8 @@ public class SigninActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                         Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(SigninActivity.this, LoginActivity.class);
+                        Intent intent = new Intent(SigninActivity.this, CaNhanActivity.class);
+                        intent.putExtra("sdt",sodt);
                         startActivity(intent);
                     }
                 });
