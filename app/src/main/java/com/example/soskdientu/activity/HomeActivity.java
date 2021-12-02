@@ -10,6 +10,7 @@ import android.os.Bundle;
 
 import com.example.soskdientu.R;
 import com.example.soskdientu.adapter.ViewpagerAdapter;
+import com.example.soskdientu.fragment.HoSoCaNhanFragment;
 import com.example.soskdientu.fragment.HomeFragment;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.database.DatabaseReference;
@@ -25,6 +26,7 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = getIntent();
          sdt1=intent.getStringExtra("sdt");
          SendDataToFragment();
+         SendDataToFragment1();
         setContentView(R.layout.activity_home);
         tabLayout = findViewById(R.id.tablayout);
         viewPager = findViewById(R.id.viewpager);
@@ -42,6 +44,14 @@ public class HomeActivity extends AppCompatActivity {
         sdt1.trim();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.viewpager,new HomeFragment());
+        fragmentTransaction.commit();
+
+
+    }
+    private  void SendDataToFragment1(){
+        sdt1.trim();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.viewpager,new HoSoCaNhanFragment());
         fragmentTransaction.commit();
 
 

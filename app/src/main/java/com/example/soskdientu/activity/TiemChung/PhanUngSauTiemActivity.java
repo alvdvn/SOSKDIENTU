@@ -19,9 +19,9 @@ public class PhanUngSauTiemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phan_ung_sau_tiem);
 
-//        Intent intent = getIntent();
-//        Bundle bundle = intent.getExtras();
-//        sdt1 =bundle.getString("sdt");
+       Intent intent = getIntent();
+//        sdt1 = intent.getStringExtra("sdt");
+
         hoten.setText(sdt1);
 
     }

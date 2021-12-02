@@ -38,7 +38,7 @@ Button btnluu;
                      ,scc.getText().toString(),sbhyt.getText().toString()
                      ,tht.getText().toString(),thd.getText().toString(),
                      qt.getText().toString(),tg.getText().toString());
-             myreb.child("HoSoCaNhan").setValue(caNhan, new DatabaseReference.CompletionListener() {
+             myreb.child("HoSoCaNhan").child("hoso").setValue(caNhan, new DatabaseReference.CompletionListener() {
                  @Override
                  public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                      Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_SHORT).show();

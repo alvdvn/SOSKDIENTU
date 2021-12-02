@@ -40,11 +40,10 @@ public class HomeFragment extends Fragment {
             btnphanung.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(getContext(), PhanUngSauTiemActivity.class);
-//                    Bundle bundle = new Bundle();
-//                    bundle.putString("sdt",sdt);
-//                    intent.putExtras(bundle);
-                    startActivity(intent);
+                    Intent intent = new Intent(getActivity().getBaseContext(), PhanUngSauTiemActivity.class);
+                    intent.putExtra("sdt",sdt);
+                  startActivity(intent);
+
                 }
             });
             datlich.setOnClickListener(new View.OnClickListener() {
