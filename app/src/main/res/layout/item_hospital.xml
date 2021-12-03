@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_height="150dp"
+    android:orientation="horizontal"
+    android:background="@drawable/bogocimgbtn">
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/benhvien" />
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_tenbv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bệnh viện"
+                android:textSize="10pt"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bv"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/tv_diachibv"
+                    android:layout_width="213dp"
+                    android:layout_height="62dp"
+                    android:layout_marginStart="10dp"
+                    android:text="Địa chỉ"
+                    android:textColor="@color/black"
+                    android:textSize="10pt" />
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
