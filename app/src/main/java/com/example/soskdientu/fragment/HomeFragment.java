@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment {
             btnphanung.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(getActivity().getBaseContext(), PhanUngSauTiemActivity.class);
+                    Intent intent = new Intent(getActivity(), PhanUngSauTiemActivity.class);
                     intent.putExtra("sdt",sdt);
                   startActivity(intent);
 

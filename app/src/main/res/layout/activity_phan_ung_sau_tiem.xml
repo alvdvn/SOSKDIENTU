@@ -28,7 +28,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp" />
     <EditText
-        android:id="@+id/edit2"
+        android:id="@+id/put_tenvacxin"
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -41,7 +41,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp" />
     <EditText
-        android:id="@+id/edit3"
+        android:id="@+id/put_ngayTiem"
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp" />
     <EditText
-        android:id="@+id/edit4"
+        android:id="@+id/put_thoigian"
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp" />
     <EditText
-        android:id="@+id/edit5"
+        android:id="@+id/put_noidung"
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -78,6 +78,7 @@
         android:maxLines="7"/>
 
     <Button
+        android:id="@+id/btn_put"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="250dp"

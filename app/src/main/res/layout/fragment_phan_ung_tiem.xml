@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/put_hoten1"
+        android:text="Họ tên:"
+        android:textColor="#050505"
+        android:textStyle="bold"
+        android:padding="3dp"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/put_tenvacxin1"
+        android:text="Ten vacxin: "
+        android:layout_below="@+id/put_hoten1"
+        android:textColor="#050505"
+        android:textStyle="bold"
+        android:padding="3dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/put_ngaytiem1"
+        android:text="Ngay tiem: "
+        android:layout_below="@+id/put_tenvacxin1"
+        android:textColor="#050505"
+        android:textStyle="bold"
+        android:padding="3dp"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/put_thoigian1"
+        android:text="Thoi gian xay ra phan ung: "
+        android:layout_below="@+id/put_ngaytiem1"
+        android:textColor="#050505"
+        android:textStyle="bold"
+        android:padding="3dp"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/put_noidung1"
+        android:text="Noi dung: "
+        android:layout_below="@+id/put_thoigian1"
+        android:textColor="#050505"
+        android:textStyle="bold"
+        android:padding="3dp"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
