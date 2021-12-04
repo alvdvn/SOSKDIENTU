@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.soskdientu.R;
 import com.example.soskdientu.activity.DatLichKham.SearchActivity;
+import com.example.soskdientu.activity.HoSoSucKhoe.Hososuckhoe;
 import com.example.soskdientu.activity.HomeActivity;
 import com.example.soskdientu.activity.TiemChung.PhanUngSauTiemActivity;
 
@@ -54,6 +55,14 @@ public class HomeFragment extends Fragment {
                     startActivity(intent);
                 }
             });
+            Hososk.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(), Hososuckhoe.class);
+                    intent.putExtra("sdt",sdt);
+                    startActivity(intent);
+                }
+            });
         return view;
 
     }
@@ -61,6 +70,7 @@ public class HomeFragment extends Fragment {
         hoten = view.findViewById(R.id.tv_hvt);
         datlich = view.findViewById(R.id.datlich);
         btnphanung =view.findViewById(R.id.phanung);
+        Hososk = view.findViewById(R.id.hososk);
     }
 
 
