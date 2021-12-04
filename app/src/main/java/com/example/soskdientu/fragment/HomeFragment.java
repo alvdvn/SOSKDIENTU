@@ -52,7 +52,7 @@ public class HomeFragment extends Fragment {
                 public void onClick(View v) {
                     Intent intent = new Intent(getActivity(), SearchActivity.class);
                     intent.putExtra("sdt",sdt);
-                    startActivity(intent);
+                    getActivity().startActivity(intent);
                 }
             });
             Hososk.setOnClickListener(new View.OnClickListener() {

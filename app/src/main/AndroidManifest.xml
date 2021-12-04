@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SOSKDIENTU">
         <activity
+            android:name=".activity.DatLichKham.ChitietActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DatLichKham.InfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DatLichKham.ShowBVActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.CaNhanActivity"
             android:exported="false" />
         <activity
@@ -45,9 +54,7 @@
             android:exported="false" />
         <activity
             android:name=".activity.HoSoSucKhoe.Hososuckhoe"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activity.Dangnhap_Dawngky.SigninActivity"
             android:exported="false" />
