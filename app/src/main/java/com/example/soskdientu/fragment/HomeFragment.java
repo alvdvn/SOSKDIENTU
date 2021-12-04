@@ -17,6 +17,9 @@ import com.example.soskdientu.activity.DatLichKham.SearchActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.Hososuckhoe;
 import com.example.soskdientu.activity.HomeActivity;
 import com.example.soskdientu.activity.TiemChung.PhanUngSauTiemActivity;
+import  com.example.soskdientu.activity.khaibaoyte.man1;
+import  com.example.soskdientu.activity.khaibaoyte.man2;
+import  com.example.soskdientu.activity.khaibaoyte.man3;
 
 
 public class HomeFragment extends Fragment {
@@ -50,7 +53,9 @@ public class HomeFragment extends Fragment {
             Khaibao.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                
+                    Intent intent = new Intent(getActivity(), man1.class);
+                    intent.putExtra("sdt",sdt);
+                    getActivity().startActivity(intent);
                 }
             });
             datlich.setOnClickListener(new View.OnClickListener() {
