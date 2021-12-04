@@ -6,11 +6,131 @@
     android:layout_height="match_parent"
     tools:context=".activity.HoSoSucKhoe.Hososuckhoe">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="com.example.soskdientu.fragment.HoSoSucKhoeFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        tools:ignore="MissingClass" />
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="657dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#58DFB4"
+                android:gravity="center"
+                android:text="Hồ Sơ Sức Khỏe "
+                android:textColor="#F9FAFB"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Số Điện Thoại:"
+                android:id="@+id/et_sodienthoai2"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Họ và tên:"
+                android:layout_marginTop="20dp"
+                android:id="@+id/et_hovaten2"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ngày tháng năng sinh:"
+                android:layout_marginTop="20dp"
+                android:id="@+id/et_namsinh2"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Giới tính :"
+                android:layout_marginTop="20dp"
+                android:id="@+id/et_gioitinh2"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Số Căn Cước:"
+                android:id="@+id/et_socancuoc2"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="SỐ thẻ bảo hiểm Y tế:"
+                android:id="@+id/et_sothebaohiemyte2"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Nhiệt Độ"
+                android:id="@+id/et_nhietđo2"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Huyết áp"
+                android:id="@+id/et_huyetap2"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Nhóm máu:"
+                android:id="@+id/et_nhommau2"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Chiều cao"
+                android:id="@+id/et_chieucao2"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Cân nặng :"
+                android:id="@+id/et_cannang2"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Nhịp tim :"
+                android:id="@+id/et_nhiptim2"
+                />
+
+
+
+
+            <Button
+                android:id="@+id/btnLuu2"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+
+                android:drawableLeft="@drawable/ic_baseline_save_24"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Lưu" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>
