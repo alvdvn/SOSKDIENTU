@@ -47,6 +47,12 @@ public class HomeFragment extends Fragment {
 
                 }
             });
+            Khaibao.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                
+                }
+            });
             datlich.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -71,6 +77,7 @@ public class HomeFragment extends Fragment {
         datlich = view.findViewById(R.id.datlich);
         btnphanung =view.findViewById(R.id.phanung);
         Hososk = view.findViewById(R.id.hososk);
+        Khaibao = view.findViewById(R.id.khaibao);
     }
 
 

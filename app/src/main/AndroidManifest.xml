@@ -45,13 +45,13 @@
             android:exported="false" />
         <activity
             android:name=".activity.khaibaoyte.man3"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.khaibaoyte.man2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.khaibaoyte.man1"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activity.HoSoSucKhoe.Hososuckhoe"
             android:exported="true" />
