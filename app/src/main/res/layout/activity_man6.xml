@@ -24,11 +24,10 @@
         android:text="Họ Tên"
         tools:layout_editor_absoluteX="20dp"
         tools:layout_editor_absoluteY="66dp" />
-
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/edtextTen"
         android:layout_width="match_parent"
-        android:layout_height="33dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
@@ -44,7 +43,7 @@
         tools:layout_editor_absoluteY="152dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/edtextNam"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -62,9 +61,9 @@
         tools:layout_editor_absoluteY="242dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/edtextCCCD"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="57dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
@@ -80,9 +79,9 @@
         tools:layout_editor_absoluteY="428dp" />
 
     <EditText
-        android:id="@+id/Quoctich"
+        android:id="@+id/edtextQuoctich"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
@@ -98,9 +97,9 @@
         tools:layout_editor_absoluteY="335dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edtextNoio"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="65dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
@@ -116,9 +115,9 @@
         tools:layout_editor_absoluteY="428dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/edtextSDT"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="64dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
@@ -128,17 +127,17 @@
     <TextView
         android:id="@+id/textView7"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="58dp"
         android:text="Trong vòng 14 ngày có đi qua khu vực/lãnh  thổ nào không ? "
         tools:layout_editor_absoluteX="21dp"
         tools:layout_editor_absoluteY="516dp" />
 
     <RadioGroup
         android:id="@+id/radiobtn1"
-        android:layout_width="287dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp">
 
 
         <RadioButton
@@ -146,12 +145,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Có" />
+            android:text="Có"
+            android:checked="true"
+            />
+
 
         <RadioButton
             android:id="@+id/radiobtnkhong1"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0"
             android:text="Không" />
     </RadioGroup>
@@ -159,17 +161,17 @@
     <TextView
         android:id="@+id/textView9"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="57dp"
         android:text="Trong vòng 14 ngày có dấu hiệu hô, sốt, khó thở,... không ? "
         tools:layout_editor_absoluteX="21dp"
         tools:layout_editor_absoluteY="616dp" />
 
     <RadioGroup
         android:id="@+id/radiobtn2"
-        android:layout_width="297dp"
-        android:layout_height="29dp"
-        android:layout_marginLeft="30dp"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp">
 
 
         <RadioButton
@@ -177,7 +179,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Có" />
+            android:text="Có"
+            android:checked="true"/>
 
         <RadioButton
             android:id="@+id/radiobtnKhong2"
@@ -187,31 +190,11 @@
             android:text="Không" />
     </RadioGroup>
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:orientation="horizontal"
-       android:layout_marginTop="50dp">
+    <Button
+        android:id="@+id/btnQl"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginLeft="150dp"
+        android:text="Quay lại" />
 
-       <Button
-           android:id="@+id/btnXoa"
-           android:layout_width="125dp"
-           android:layout_height="wrap_content"
-           android:layout_marginLeft="16dp"
-           android:backgroundTint="#D63BE1"
-           android:drawableLeft="@drawable/ic_baseline_save_24"
-           android:text="Xóa Tờ Khai " />
-
-       <Button
-           android:id="@+id/btngui"
-           android:layout_width="120dp"
-           android:layout_height="wrap_content"
-           android:layout_marginLeft="150dp"
-           android:backgroundTint="#CF3CDA"
-           android:drawableLeft="@drawable/ic_baseline_cancel_24"
-           android:text="Gửi Tờ Khai" />
-   </LinearLayout>
 </LinearLayout>
-
-
-

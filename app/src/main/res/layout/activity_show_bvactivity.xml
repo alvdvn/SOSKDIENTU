@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activity.DatLichKham.ShowBVActivity">
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thông tim cơ sở y tế"
+        android:textSize="14pt"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bogocbtn"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:background="@drawable/bogoclayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="50dp"
+                    android:src="@drawable/benhvien" />
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_tenbv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bệnh viện"
+                        android:textColor="@color/black"
+                        android:textSize="10pt"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/bv" />
+
+                        <TextView
+                            android:id="@+id/tv_diachibv1"
+                            android:layout_width="213dp"
+                            android:layout_height="62dp"
+                            android:layout_marginStart="10dp"
+                            android:text="Địa chỉ"
+                            android:textColor="@color/black"
+                            android:textSize="10pt" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btndatlich"
+                        android:layout_width="175dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/bogocbutton"
+                        android:text="Đặt lịch khám" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/bogoclayout"
+            android:layout_width="match_parent"
+            android:layout_height="313dp"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Liên hệ"
+                android:textColor="@color/black"
+                android:textSize="12pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_sdtbv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:text="Số điện thoại:"
+                android:textColor="@color/black"
+                android:textSize="12pt" />
+
+            <TextView
+                android:id="@+id/tv_emailbv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:text="Email:"
+                android:textColor="@color/black"
+                android:textSize="12pt" />
+
+            <TextView
+                android:id="@+id/tv_websitebv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:text="website:"
+                android:textColor="@color/black"
+                android:textSize="12pt" />
+
+            <TextView
+                android:id="@+id/tv_fbbv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:text="Fanpage:"
+                android:textColor="@color/black"
+                android:textSize="12pt" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

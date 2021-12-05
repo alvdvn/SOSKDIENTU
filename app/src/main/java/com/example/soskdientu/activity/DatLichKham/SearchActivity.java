@@ -6,7 +6,9 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.soskdientu.R;
@@ -25,22 +27,26 @@ import java.util.List;
 public class SearchActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     SearchView searchView;
+    TextView title;
     List<Hospital> list;
     HospitalAdapter adapter,adapter1;
     List<Hospital> fillterlist;
+    String sdt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+        Intent intent = getIntent();
+        sdt = intent.getStringExtra("sdt");
+
         recyclerView = findViewById(R.id.recycleview);
+        title =findViewById(R.id.title1);
+
         searchView = findViewById(R.id.searchview);
         fillterlist = new ArrayList<>();
         list = new ArrayList<>();
         getlistbv();
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        adapter = new HospitalAdapter(getApplicationContext(),list);
-        recyclerView.setAdapter(adapter);
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -50,7 +56,7 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextChange(String newText) {
                 filter(newText);
-                adapter1= new HospitalAdapter(getApplicationContext(),fillterlist);
+                adapter1= new HospitalAdapter(SearchActivity.this,fillterlist,sdt);
                 recyclerView.setAdapter(adapter1);
                 return true;
             }
@@ -74,7 +80,12 @@ public class SearchActivity extends AppCompatActivity {
                 for (DataSnapshot dataSnapshot:snapshot.getChildren()){
                     Hospital hospital = dataSnapshot.getValue(Hospital.class);
                     list.add(hospital);
+
                 }
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+                recyclerView.setLayoutManager(linearLayoutManager);
+                adapter = new HospitalAdapter(SearchActivity.this,list,sdt);
+                recyclerView.setAdapter(adapter);
 
             }
 
