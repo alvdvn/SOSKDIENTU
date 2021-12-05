@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,6 +37,7 @@ public class HoSoCaNhanFragment extends Fragment {
      List<CaNhan> listcn;
     CaNhan caNhan;
     HomeActivity homeActivity ;
+    Button btnupdate;
 
 
 
@@ -63,6 +65,7 @@ public class HoSoCaNhanFragment extends Fragment {
         tht=view.findViewById(R.id.tv_thoihantu1);
         qt=view.findViewById(R.id.tv_quoctich1);
         tg=view.findViewById(R.id.tv_tongiao1);
+        btnupdate=view.findViewById(R.id.btnupdate);
 
     }   private void getlistuser(String sdt1){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -92,15 +95,15 @@ public class HoSoCaNhanFragment extends Fragment {
 
     private void settext(){
         sdt1.setText(sdt);
-        ht.setText(caNhan.getHoTen());
-        dc.setText(caNhan.getDiaChi());
-        ns.setText(caNhan.getNamSinh());
-        gt.setText(caNhan.getGioiTinh());
-        cc.setText(caNhan.getSoCanCuoc());
-        sbhyt.setText(caNhan.getSoTheBaoHiemYTe());
-        tht.setText(caNhan.getThoiHanSdTheTuNgay());
-        thd.setText(caNhan.getThoiHanSdTheDenNgay());
-        qt.setText(caNhan.getQuocTich());
-        tg.setText(caNhan.getTonGiao());
+        ht.setText("Họ và tên: "+caNhan.getHoTen());
+        dc.setText("Địa chỉ: "+caNhan.getDiaChi());
+        ns.setText(" Ngày sinh: " +caNhan.getNamSinh());
+        gt.setText("Giới tính: "+caNhan.getGioiTinh());
+        cc.setText("Số căn cước:"+caNhan.getSoCanCuoc());
+        sbhyt.setText("Số BHYT: "+caNhan.getSoTheBaoHiemYTe());
+        tht.setText(" Từ ngày: "+caNhan.getThoiHanSdTheTuNgay());
+        thd.setText(" Đến ngày: "+caNhan.getThoiHanSdTheDenNgay());
+        qt.setText("Quốc tịch: "+caNhan.getQuocTich());
+        tg.setText("Tôn giáo: "+caNhan.getTonGiao());
     }
 }

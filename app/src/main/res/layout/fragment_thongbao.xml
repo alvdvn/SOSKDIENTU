@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_layout"
     tools:context=".fragment.ThongbaoFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="TIN TỨC NÓNG "
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="16pt"
+        android:textStyle="bold" />
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="30dp"
+        android:layout_height="800dp"
 
-</FrameLayout>
+        android:orientation="vertical">
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+
+
+            android:layout_height="800dp"
+            android:id="@+id/web"></WebView>
+
+    </LinearLayout>
+
+</LinearLayout>

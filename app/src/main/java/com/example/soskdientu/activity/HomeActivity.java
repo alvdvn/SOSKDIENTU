@@ -9,10 +9,12 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.soskdientu.R;
+import com.example.soskdientu.activity.thongbao.ThongbaoActivity;
 import com.example.soskdientu.adapter.ViewpagerAdapter;
 import com.example.soskdientu.fragment.DatLichFragment;
 import com.example.soskdientu.fragment.HoSoCaNhanFragment;
 import com.example.soskdientu.fragment.HomeFragment;
+import com.example.soskdientu.fragment.ThongbaoFragment;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -28,7 +30,11 @@ public class HomeActivity extends AppCompatActivity {
          sdt1=intent.getStringExtra("sdt");
          SendDataToFragment();
          SendDataToFragment1();
+<<<<<<< HEAD
          SendDataToFragment2();
+=======
+        SendDataToFragment1();
+>>>>>>> cc5ef63e8020d77a4fbb57aade2af12640109ca5
         setContentView(R.layout.activity_home);
         tabLayout = findViewById(R.id.tablayout);
         viewPager = findViewById(R.id.viewpager);
@@ -59,9 +65,15 @@ public class HomeActivity extends AppCompatActivity {
 
     }
     private  void SendDataToFragment2(){
+<<<<<<< HEAD
         sdt1.trim();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.viewpager,new DatLichFragment());
+=======
+//        sdt1.trim();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.viewpager,new ThongbaoFragment());
+>>>>>>> cc5ef63e8020d77a4fbb57aade2af12640109ca5
         fragmentTransaction.commit();
 
 
