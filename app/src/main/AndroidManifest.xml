@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SOSKDIENTU">
         <activity
-<<<<<<< HEAD
             android:name=".activity.DatLichKham.Chitiet2Activity"
             android:exported="false" />
         <activity
@@ -25,8 +24,7 @@
             android:name=".activity.DatLichKham.ShowBVActivity"
             android:exported="false" />
         <activity
-=======
->>>>>>> cc5ef63e8020d77a4fbb57aade2af12640109ca5
+
             android:name=".activity.CaNhanActivity"
             android:exported="false" />
         <activity
