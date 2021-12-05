@@ -127,4 +127,9 @@
         android:layout_width="wrap_content"
         android:layout_below="@+id/tv_chieucao2"
         android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="update"
+        android:id="@+id/btnupdate5"/>
 </LinearLayout>

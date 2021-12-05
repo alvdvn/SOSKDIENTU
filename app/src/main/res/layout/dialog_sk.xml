@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Hồ Sơ Sức khỏe "
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="16pt"
+        android:textStyle="bold" />
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="580dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bogocbtn"
+
+            android:orientation="vertical">
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="#D541C1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="Hồ Sơ Cá Nhân "-->
+<!--                            android:textColor="#F9FAFB"-->
+<!--                            android:textSize="20dp"-->
+<!--                            android:textStyle="bold" />-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Số Điện Thoại:"
+                android:id="@+id/et_sodienthoai5"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Họ và tên:"
+                android:layout_marginTop="20dp"
+                android:id="@+id/et_hovaten4"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ngày tháng năng sinh:"
+                android:layout_marginTop="20dp"
+                android:id="@+id/et_namsinh4"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Giới tính :"
+                android:layout_marginTop="20dp"
+                android:id="@+id/et_gioitinh4"
+
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Số Căn Cước:"
+                android:id="@+id/et_socancuoc4"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="SỐ thẻ bảo hiểm Y tế:"
+                android:id="@+id/et_sothebaohiemyte4"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Nhiệt độ  :"
+                android:id="@+id/et_nhietdo4"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Huyết áp:"
+                android:id="@+id/et_huyetao4"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhịp tim:"
+                android:layout_marginTop="20dp"
+                android:id="@+id/et_nhiptim4"
+
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhóm máu:"
+                android:layout_marginTop="20dp"
+                android:id="@+id/et_nhommau4"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Chiều cao"
+                android:id="@+id/et_chieucao4"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Cân nặng"
+                android:id="@+id/et_cannang4"
+                />
+
+            <Button
+                android:id="@+id/btnLuu4"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:drawableLeft="@drawable/ic_baseline_save_24"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Update" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
