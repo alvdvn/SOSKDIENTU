@@ -56,6 +56,15 @@
             android:name=".activity.khaibaoyte.man1"
             android:exported="true" />
         <activity
+            android:name=".activity.khaibaoyte.man4"
+            android:exported="true" />
+        <activity
+            android:name=".activity.khaibaoyte.man5"
+            android:exported="true" />
+        <activity
+            android:name=".activity.khaibaoyte.man6"
+            android:exported="true" />
+        <activity
             android:name=".activity.HoSoSucKhoe.Hososuckhoe"
             android:exported="true" />
         <activity
