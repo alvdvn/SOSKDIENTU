@@ -43,8 +43,8 @@ public class HSSKhienthiActivity extends AppCompatActivity {
         btnupdate5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
-                View view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.dialog_sk, null);
+                AlertDialog.Builder builder = new AlertDialog.Builder(HSSKhienthiActivity.this);
+                View view = LayoutInflater.from(HSSKhienthiActivity.this).inflate(R.layout.dialog_sk, null);
                 builder.setView(view);
                 Dialog dialog = builder.create();
                 dialog.show();

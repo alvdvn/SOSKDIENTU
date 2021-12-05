@@ -69,9 +69,15 @@ public class HomeFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     getHSSK(sdt);
-//                    Intent intent = new Intent(getActivity(), HSSKhienthiActivity.class);
-//                    intent.putExtra("sdt",sdt);
-//                    startActivity(intent);
+//                    if(hsSucKhoe.getChieuCao()==null){
+//                        Intent intent = new Intent(getActivity(), Hososuckhoe.class);
+//                        intent.putExtra("sdt",sdt);
+//                        startActivity(intent);
+//                    }
+                        Intent intent = new Intent(getActivity(), HSSKhienthiActivity.class);
+                        intent.putExtra("sdt", sdt);
+                        startActivity(intent);
+
                 }
             });
         return view;
@@ -96,15 +102,7 @@ public class HomeFragment extends Fragment {
 
 
                 }
-                    if(hsSucKhoe.getChieuCao()!=null){
-                        Intent intent = new Intent(getActivity(), HSSKhienthiActivity.class);
-                        intent.putExtra("sdt",sdt1);
-                        startActivity(intent);
-                    }else {
-                        Intent intent = new Intent(getActivity(), Hososuckhoe.class);
-                        intent.putExtra("sdt", sdt1);
-                        startActivity(intent);
-                    }
+
 
 
             }
