@@ -1,8 +1,12 @@
 package com.example.soskdientu.fragment;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.soskdientu.R;
+import com.example.soskdientu.activity.CaNhanActivity;
 import com.example.soskdientu.activity.HomeActivity;
 import com.example.soskdientu.model.CaNhan;
 import com.example.soskdientu.model.Nguoidung;
@@ -30,7 +35,9 @@ import java.util.Stack;
 
 
 public class HoSoCaNhanFragment extends Fragment {
+    EditText ht3,gt3,ns3,dc3,sdt13,scc3,sbhyt3,tht3,thd3,qt3,tg3;
     private FloatingActionButton btnAdd;
+    Button btnupdate1;
     View view;
     String sdt;
      TextView ht,dc,gt,ns,cc,sbhyt,tht,thd,qt,tg,sdt1;
@@ -49,6 +56,49 @@ public class HoSoCaNhanFragment extends Fragment {
         sdt= homeActivity.getSdt1();
         anhxa();
        getlistuser(sdt);
+       btnupdate.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                View view = LayoutInflater.from(getContext()).inflate(R.layout.dialog_canhan, null);
+                builder.setView(view);
+                Dialog dialog = builder.create();
+                dialog.show();
+                ht3=view.findViewById(R.id.et_hovaten3);
+                gt3=view.findViewById(R.id.et_gioitinh3);
+                ns3=view.findViewById(R.id.et_namsinh3);
+                sdt13=view.findViewById(R.id.et_sodienthoai3);
+                scc3=view.findViewById(R.id.et_socancuoc3);
+                dc3=view.findViewById(R.id.et_diachi3);
+                sbhyt3=view.findViewById(R.id.et_sothebaohiemyte3);
+                thd3=view.findViewById(R.id.et_thdn3);
+                tht3=view.findViewById(R.id.et_thtu3);
+                qt3=view.findViewById(R.id.et_quoctich3);
+                tg3=view.findViewById(R.id.et_tongiao3);
+                btnupdate1=view.findViewById(R.id.btnLuu3);
+              btnupdate1.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+                      FirebaseDatabase database = FirebaseDatabase.getInstance();
+                      DatabaseReference myreb = database.getReference("user/"+sdt);
+                      CaNhan caNhan= new CaNhan(ht3.getText().toString(),ns3.getText().toString()
+                              ,dc3.getText().toString(),gt3.getText().toString()
+                              ,scc3.getText().toString(),sbhyt3.getText().toString()
+                              ,tht3.getText().toString(),thd3.getText().toString(),
+                              qt3.getText().toString(),tg3.getText().toString());
+                      myreb.child("HoSoCaNhan").child("hoso").setValue(caNhan, new DatabaseReference.CompletionListener() {
+                          @Override
+                          public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                              Toast.makeText(getContext(), "update thành công", Toast.LENGTH_SHORT).show();
+
+
+                          }
+                      });
+
+                  }
+              });
+           }
+       });
         return view;
 
     }

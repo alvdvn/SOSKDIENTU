@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.example.soskdientu.R;
 import com.example.soskdientu.activity.CaNhanActivity;
 import com.example.soskdientu.activity.HomeActivity;
+import com.example.soskdientu.fragment.HsSucKhoeFragment;
 import com.example.soskdientu.model.HsSucKhoe;
 import com.example.soskdientu.model.Nguoidung;
 import com.google.firebase.database.DataSnapshot;
@@ -52,7 +53,7 @@ Button btnluu2;
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                         Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_SHORT).show();
-                        Intent intent2 = new Intent(Hososuckhoe.this, HomeActivity.class);
+                        Intent intent2 = new Intent(Hososuckhoe.this, HSSKhienthiActivity.class);
                         intent2.putExtra("sdt",sdt);
                         startActivity(intent2);
                     }
