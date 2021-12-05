@@ -3,6 +3,7 @@ package com.example.soskdientu.model;
 public class DatLichKham {
     String hoten;
     String CMND;
+    String benhvien;
     String date;
     String time;
     String trieuchung;
@@ -11,9 +12,10 @@ public class DatLichKham {
     public DatLichKham() {
     }
 
-    public DatLichKham(String hoten, String CMND, String date, String time, String trieuchung, String BHYT) {
+    public DatLichKham(String hoten, String CMND, String benhvien, String date, String time, String trieuchung, String BHYT) {
         this.hoten = hoten;
         this.CMND = CMND;
+        this.benhvien = benhvien;
         this.date = date;
         this.time = time;
         this.trieuchung = trieuchung;
@@ -34,6 +36,14 @@ public class DatLichKham {
 
     public void setCMND(String CMND) {
         this.CMND = CMND;
+    }
+
+    public String getBenhvien() {
+        return benhvien;
+    }
+
+    public void setBenhvien(String benhvien) {
+        this.benhvien = benhvien;
     }
 
     public String getDate() {

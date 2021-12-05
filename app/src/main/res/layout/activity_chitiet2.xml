@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background_layout"
-    tools:context=".activity.DatLichKham.ChitietActivity">
+    tools:context=".activity.DatLichKham.Chitiet2Activity">
 
     <TextView
         android:layout_marginTop="30dp"
@@ -17,10 +17,6 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="14pt"/>
-
-
-
-
     <LinearLayout
         android:layout_marginTop="30dp"
         android:background="@drawable/bogoclayout"
@@ -37,7 +33,7 @@
             android:text="Lich khám bệnh"
             android:layout_gravity="center"/>
         <TextView
-            android:id="@+id/tv_hvtct"
+            android:id="@+id/tv_hvtct1"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
@@ -48,7 +44,7 @@
             android:text="Họ và tên: "
             />
         <TextView
-            android:id="@+id/tv_cmndct"
+            android:id="@+id/tv_cmndct1"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
@@ -59,7 +55,7 @@
             android:text="Số CMND/CCCD: "
             />
         <TextView
-            android:id="@+id/tv_benhvienct"
+            android:id="@+id/tv_benhvienct1"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
@@ -70,7 +66,7 @@
             android:text="Bệnh Viện "
             />
         <TextView
-            android:id="@+id/ngaykhamct"
+            android:id="@+id/ngaykhamct1"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
@@ -81,7 +77,7 @@
             android:text="Ngày khám: "
             />
         <TextView
-            android:id="@+id/giokhamct"
+            android:id="@+id/giokhamct1"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
@@ -92,7 +88,7 @@
             android:text="Giờ khám: "
             />
         <TextView
-            android:id="@+id/tv_trieuchungchitiet"
+            android:id="@+id/tv_trieuchungchitiet1"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
@@ -118,7 +114,7 @@
                 />
             <CheckBox
                 android:layout_marginBottom="8dp"
-                android:id="@+id/cb_co"
+                android:id="@+id/cb_co1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -129,7 +125,7 @@
                 android:textStyle="bold" />
             <CheckBox
                 android:layout_marginBottom="8dp"
-                android:id="@+id/cb_ko"
+                android:id="@+id/cb_ko1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

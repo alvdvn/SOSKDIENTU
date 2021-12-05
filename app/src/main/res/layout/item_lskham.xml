@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/onclickitem"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/bogoclayout"
+    android:layout_height="wrap_content">
+     <TextView
+
+         android:layout_marginLeft="30dp"
+         android:textColor="@color/black"
+         android:id="@+id/item_ten"
+         android:textSize="12pt"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Họ và tên"
+         />
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/black"
+        android:id="@+id/item_benhvien"
+        android:textSize="12pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bệnh viện"
+        />
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
+            android:id="@+id/item_ngaykham"
+            android:textSize="12pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày khám"
+            />
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
+            android:id="@+id/item_giokham"
+            android:textSize="12pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giờ khám"
+            />
+
+
+
+</LinearLayout>

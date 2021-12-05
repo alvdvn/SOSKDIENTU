@@ -10,9 +10,9 @@ import android.widget.TextView;
 import com.example.soskdientu.R;
 
 public class ChitietActivity extends AppCompatActivity {
-    TextView hoten,cmnd,ngaykham,giokham,trieuchung;
+    TextView hoten,cmnd,ngaykham,giokham,trieuchung,bẹnhvien;
     CheckBox co,khong;
-    String hoten1,cmnd1,ngaykham1,giokham1,trieuchung1,sdt,bhyt;
+    String hoten1,cmnd1,ngaykham1,giokham1,trieuchung1,sdt,bhyt,tenbv;
 
 
     @Override
@@ -21,15 +21,16 @@ public class ChitietActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chitiet);
         anhxa();
         getdata();
-        hoten.setText(hoten1);
-        cmnd.setText(cmnd1);
-        ngaykham.setText(ngaykham1);
-        giokham.setText(giokham1);
-        trieuchung.setText(trieuchung1);
-        if (bhyt.equals("Có")) {
-            co.setSelected(true);
+        hoten.setText("Họ và tên : "+hoten1);
+        cmnd.setText("Số CMND/CCCD: "+cmnd1);
+        bẹnhvien.setText("Bệnh viện: "+tenbv);
+        ngaykham.setText("Ngày khám : "+ngaykham1);
+        giokham.setText("Giờ khám: "+giokham1);
+        trieuchung.setText("Triệu chứng: "+trieuchung1);
+        if(bhyt.equals("co")){
+            co.setChecked(true);
         }else{
-            khong.setSelected(true);
+            khong.setChecked(true);
         }
 
 
@@ -39,6 +40,7 @@ public class ChitietActivity extends AppCompatActivity {
     private void anhxa(){
         hoten=findViewById(R.id.tv_hvtct);
         cmnd = findViewById(R.id.tv_cmndct);
+        bẹnhvien = findViewById(R.id.tv_benhvienct);
         ngaykham = findViewById(R.id.ngaykhamct);
         giokham= findViewById(R.id.giokhamct);
         trieuchung = findViewById(R.id.tv_trieuchungchitiet);
@@ -56,5 +58,7 @@ public class ChitietActivity extends AppCompatActivity {
         giokham1 = bundle.getString("giokham");
         trieuchung1=  bundle.getString("trieuchung");
         bhyt=bundle.getString("bhyt");
+        tenbv = bundle.getString("ten");
+
     }
 }

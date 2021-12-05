@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.DatLichFragment">
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".fragment.DatLichFragment"
+    android:background="@drawable/background_layout"
+    android:orientation="vertical">
     <TextView
+        android:layout_marginTop="30dp"
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:text="Lịch sử đặt lịch khám"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14pt"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="666dp"
+        android:orientation="vertical"
+        android:background="@drawable/bogoclayout"
+        android:layout_marginTop="30dp"  >
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danh sách đặt lịch"
+                android:textSize="14pt"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
 
-</FrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_lichsu"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

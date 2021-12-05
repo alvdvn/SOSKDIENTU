@@ -43,9 +43,10 @@ public class InfoActivity extends AppCompatActivity {
     Button xacnhan;
     List<CaNhan> listcn;
     CaNhan caNhan;
-    String sdt;
+    String sdt,tenbv;
     DatePickerDialog.OnDateSetListener setListener;
     int hour1,minute1;
+    String bh;
 
 
     @Override
@@ -56,6 +57,7 @@ public class InfoActivity extends AppCompatActivity {
         Intent intent =getIntent();
         Bundle bundle = intent.getExtras();
         sdt = bundle.getString("sdt");
+        tenbv = bundle.getString("ten");
 
         getlistuser(sdt);
         Calendar calendar = Calendar.getInstance();
@@ -78,7 +80,7 @@ public class InfoActivity extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int day) {
                         month = month+1;
-                        String date  = day+"/"+month+"/"+year;
+                        String date  = day+"-"+month+"-"+year;
                         ngaykham.setText(date);
                     }
                 },year,month,day);
@@ -120,26 +122,28 @@ public class InfoActivity extends AppCompatActivity {
         xacnhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                    bhyt();
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myreb = database.getReference("user/"+sdt);
                 DatLichKham lich = new DatLichKham(
-                        hoten.getText().toString(),cmnd.getText().toString(),
-                        ngaykham.getText().toString(),giokham.getText().toString(),trieuchung.getText().toString(),bhyt()
+                        hoten.getText().toString(),cmnd.getText().toString(),tenbv,
+                        ngaykham.getText().toString(),giokham.getText().toString(),trieuchung.getText().toString(),bh
 
                 );
                 myreb.child("LichKham").child(ngaykham.getText().toString()).setValue(lich, new DatabaseReference.CompletionListener() {
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                        Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Đặt lịch thành công", Toast.LENGTH_SHORT).show();
                         Intent intent1 = new Intent(InfoActivity.this, ChitietActivity.class);
                         Bundle bundle = new Bundle();
+                        bundle.putString("ten" ,tenbv);
                         bundle.putString("sdt",sdt);
                         bundle.putString("hoten",hoten.getText().toString());
                         bundle.putString("cmnd",cmnd.getText().toString());
                         bundle.putString("ngaykham",ngaykham.getText().toString());
                         bundle.putString("giokham",giokham.getText().toString());
                         bundle.putString("trieuchung",trieuchung.getText().toString());
-                        bundle.putString("bhyt",bhyt());
+                        bundle.putString("bhyt",bh);
                         intent1.putExtras(bundle);
                         startActivity(intent1);
                     }
@@ -148,15 +152,13 @@ public class InfoActivity extends AppCompatActivity {
         });
 
     }
-    private  String bhyt(){
-        String bh;
-        if (bhyt.isSelected()){
-            bh = "Có";
+    private  void bhyt() {
+
+        if (bhyt.isChecked()) {
+            bh = "co";
+        } else {
+            bh = "khong";
         }
-        else{
-            bh="Không";
-        }
-        return bh;
     }
 
     private  void anhxa(){

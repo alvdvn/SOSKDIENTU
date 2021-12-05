@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SOSKDIENTU">
         <activity
+            android:name=".activity.DatLichKham.Chitiet2Activity"
+            android:exported="false" />
+        <activity
             android:name=".activity.DatLichKham.ChitietActivity"
             android:exported="false" />
         <activity
