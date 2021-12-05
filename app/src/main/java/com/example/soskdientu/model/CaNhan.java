@@ -1,5 +1,8 @@
 package com.example.soskdientu.model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CaNhan {
 
     private String hoTen,namSinh,diaChi,gioiTinh,soCanCuoc,soTheBaoHiemYTe,thoiHanSdTheTuNgay,thoiHanSdTheDenNgay,quocTich,tonGiao;
@@ -96,7 +99,11 @@ public class CaNhan {
         return tonGiao;
     }
 
-    public void setTonGiao(String tonGiao) {
-        this.tonGiao = tonGiao;
-    }
+//    public void setTonGiao(String tonGiao) {
+//        this.tonGiao = tonGiao;
+//    }
+//    public Map<String,Object> editUser(){
+//        HashMap<String,Object> result= new HashMap<>();
+//        result.put()
+//    }
 }

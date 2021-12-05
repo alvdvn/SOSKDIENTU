@@ -4,8 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_layout"
     tools:context=".activity.CaNhanActivity">
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Hồ Sơ Cá Nhân "
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="16pt"
+        android:textStyle="bold" />
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="850dp"></LinearLayout>-->
     <ScrollView
         android:layout_width="409dp"
         android:layout_height="657dp"
@@ -14,17 +27,20 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="800dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bogocbtn"
+
             android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#D541C1"
-                android:gravity="center"
-                android:text="Hồ Sơ Cá Nhân "
-                android:textColor="#F9FAFB"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="#D541C1"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Hồ Sơ Cá Nhân "-->
+<!--                android:textColor="#F9FAFB"-->
+<!--                android:textSize="20dp"-->
+<!--                android:textStyle="bold" />-->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -119,6 +135,7 @@
 
 
         </LinearLayout>
+
 
     </ScrollView>
 </LinearLayout>
