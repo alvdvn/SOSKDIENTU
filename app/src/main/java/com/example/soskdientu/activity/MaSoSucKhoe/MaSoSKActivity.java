@@ -38,8 +38,7 @@ public class MaSoSKActivity extends AppCompatActivity {
         caNhan= new CaNhan();
         sucKhoe = new HsSucKhoe();
         QRcode = findViewById(R.id.img_qrcode);
-        getlistuser(sdt);
-        getlistHS(sdt);
+
         try {
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myreb = database.getReference("user/"+sdt+"/HoSoCaNhan");
