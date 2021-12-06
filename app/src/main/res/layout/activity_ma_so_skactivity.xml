@@ -4,14 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+
+    android:background="@drawable/background_layout"
     android:layout_height="match_parent"
     tools:context=".activity.MaSoSucKhoe.MaSoSKActivity">
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14pt"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Mã Số Sức khoe"
+            android:layout_gravity="center"
+                />
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bogoclayout">
+
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:id="@+id/img_qrcode"/>
 
-
+        </LinearLayout>
 </LinearLayout>
