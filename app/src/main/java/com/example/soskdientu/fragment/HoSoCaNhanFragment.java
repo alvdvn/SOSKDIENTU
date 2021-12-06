@@ -117,7 +117,8 @@ public class HoSoCaNhanFragment extends Fragment {
         tg=view.findViewById(R.id.tv_tongiao1);
         btnupdate=view.findViewById(R.id.btnupdate);
 
-    }   private void getlistuser(String sdt1){
+    }
+        private void getlistuser(String sdt1){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myreb = database.getReference("user/"+sdt1+"/HoSoCaNhan");
         myreb.addValueEventListener(new ValueEventListener() {

@@ -18,6 +18,8 @@ import com.example.soskdientu.R;
 import com.example.soskdientu.activity.DatLichKham.SearchActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.HSSKhienthiActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.Hososuckhoe;
+import com.example.soskdientu.activity.MaSoSucKhoe.MaSoSKActivity;
+import com.example.soskdientu.activity.khaibaoyte.man1;
 import com.example.soskdientu.activity.HomeActivity;
 import com.example.soskdientu.activity.TiemChung.PhanUngSauTiemActivity;
 import com.example.soskdientu.model.HsSucKhoe;
@@ -27,14 +29,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class HomeFragment extends Fragment {
     ImageView Khaibao,Hososk,datlich;
     TextView hoten;
     View view;
     String sdt;
-    ImageView btnphanung;
+    ImageView btnphanung,btnmasosk;
     HsSucKhoe hsSucKhoe;
+    List<HsSucKhoe> hsSucKhoeList;
     HomeActivity homeActivity;
     public HomeFragment() {
     }
@@ -69,26 +75,38 @@ public class HomeFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     getHSSK(sdt);
-//                    if(hsSucKhoe.getChieuCao()==null){
-//                        Intent intent = new Intent(getActivity(), Hososuckhoe.class);
-//                        intent.putExtra("sdt",sdt);
-//                        startActivity(intent);
-//                    }
-                        Intent intent = new Intent(getActivity(), HSSKhienthiActivity.class);
-                        intent.putExtra("sdt", sdt);
-                        startActivity(intent);
 
                 }
             });
+            Khaibao.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(), man1.class);
+                    intent.putExtra("sdt",sdt);
+                    startActivity(intent);
+                }
+            });
+            btnmasosk.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(), MaSoSKActivity.class);
+                            intent.putExtra("sdt",sdt);
+                            startActivity(intent);
+                }
+            });
+
         return view;
 
     }
     private void anhxa(){
+        hsSucKhoeList = new ArrayList<>();
         hsSucKhoe = new HsSucKhoe();
         hoten = view.findViewById(R.id.tv_hvt);
         datlich = view.findViewById(R.id.datlich);
         btnphanung =view.findViewById(R.id.phanung);
         Hososk = view.findViewById(R.id.hososk);
+        Khaibao = view.findViewById(R.id.khaibao);
+        btnmasosk = view.findViewById(R.id.masosk);
     }
     private void  getHSSK(String sdt1){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -99,8 +117,17 @@ public class HomeFragment extends Fragment {
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     hsSucKhoe = dataSnapshot.getValue(HsSucKhoe.class);
+                    hsSucKhoeList.add(hsSucKhoe);
 
-
+                }
+                if(hsSucKhoeList!=null){
+                    Intent intent = new Intent(getActivity(), HSSKhienthiActivity.class);
+                    intent.putExtra("sdt",sdt);
+                    startActivity(intent);
+                }else {
+                    Intent intent = new Intent(getActivity(), Hososuckhoe.class);
+                    intent.putExtra("sdt", sdt);
+                    startActivity(intent);
                 }
 
 
