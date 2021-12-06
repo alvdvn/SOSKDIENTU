@@ -2,8 +2,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background_layout">
     <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14pt"
+        android:textStyle="bold"
+        android:text="Phản ứng sau tiêm"/>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="666dp"
+        android:orientation="vertical"
+        android:background="@drawable/bogoclayout">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="12pt"
+            android:textStyle="bold"
+            android:text="Chi tiết phản ứng"/>
+
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
         android:id="@+id/put_hoten1"
         android:text="Họ tên:"
         android:textColor="#050505"
@@ -13,16 +42,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
+        android:layout_marginLeft="30dp"
         android:id="@+id/put_tenvacxin1"
         android:text="Ten vacxin: "
         android:layout_below="@+id/put_hoten1"
         android:textColor="#050505"
         android:textStyle="bold"
         android:padding="3dp"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
+        android:layout_marginLeft="30dp"
         android:id="@+id/put_ngaytiem1"
         android:text="Ngay tiem: "
         android:layout_below="@+id/put_tenvacxin1"
@@ -33,6 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
+        android:layout_marginLeft="30dp"
         android:id="@+id/put_thoigian1"
         android:text="Thoi gian xay ra phan ung: "
         android:layout_below="@+id/put_ngaytiem1"
@@ -43,6 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
+        android:layout_marginLeft="30dp"
         android:id="@+id/put_noidung1"
         android:text="Noi dung: "
         android:layout_below="@+id/put_thoigian1"
@@ -52,5 +85,6 @@
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+    </LinearLayout>
 
 </LinearLayout>
