@@ -23,8 +23,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class PhanUngSauTiemActivity extends AppCompatActivity {
-    EditText hoten,ngayTiem,tenVacxin,thoiGian,noidDung;
-    Button btn;
+    EditText hoten,tenVacxin,ngayTiem,thoiGian,noidDung;
+    Button btn,btn1;
     String sdt1;
 
 
@@ -32,7 +32,6 @@ public class PhanUngSauTiemActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phan_ung_sau_tiem);
-
         anhxa();
         Intent intent = getIntent();
         sdt1 = intent.getStringExtra("sdt");
@@ -52,23 +51,31 @@ public class PhanUngSauTiemActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                         Toast.makeText(getApplicationContext(), "Nhập thông tin thành công", Toast.LENGTH_SHORT).show();
-                        Intent intent1 = new Intent(PhanUngSauTiemActivity.this, PhanUngTIemfragment.class);
-                        intent1.putExtra("sdt",sdt1);
-                        startActivity(intent1);
                     }
                 });
+
+            }
+        });
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(PhanUngSauTiemActivity.this, MainActivity1.class);
+                startActivity(intent1);
             }
         });
 
     }
-
     private void anhxa() {
-
         hoten = findViewById(R.id.edit1);
         ngayTiem = findViewById(R.id.put_ngayTiem);
         tenVacxin = findViewById(R.id.put_tenvacxin);
         thoiGian = findViewById(R.id.put_thoigian);
         noidDung = findViewById(R.id.put_noidung);
         btn = findViewById(R.id.btn_put);
+        btn1 = findViewById(R.id.btn_put1);
+    }
+
+    public String getSdt1() {
+        return sdt1;
     }
 }

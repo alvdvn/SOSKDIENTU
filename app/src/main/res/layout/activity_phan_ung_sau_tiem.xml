@@ -81,8 +81,15 @@
         android:id="@+id/btn_put"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="250dp"
-        android:text="Xac nhan"/>
+        android:layout_marginLeft="0dp"
+        android:text="Xac nhan thong tin"/>
+
+    <Button
+        android:id="@+id/btn_put1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:text="Xem chi tiet" />
 
 
 </LinearLayout>
