@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.soskdientu.R;
 import com.example.soskdientu.activity.HomeActivity;
+import com.example.soskdientu.activity.TiemChung.MainActivity1;
 import com.example.soskdientu.activity.TiemChung.PhanUngSauTiemActivity;
 import com.example.soskdientu.model.CaNhan;
 import com.example.soskdientu.model.PhanUngSauTiem;
@@ -29,21 +30,25 @@ import java.util.List;
 public class PhanUngTIemfragment extends Fragment {
 
     View view;
-    String sdt1;
+    String sdt1,hoTen;
     TextView hoten,tenVacxin,ngayTiem,thoiGian,noiDung;
     List<PhanUngSauTiem> listPUST;
     PhanUngSauTiem PUST;
     HomeActivity homeActivity;
-    PhanUngSauTiemActivity activity;
+    MainActivity1 activity;
+    CaNhan CN;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view= inflater.inflate(R.layout.fragment_phan_ung_tiem, container, false);
-//        homeActivity = (HomeActivity) getActivity();
-//        sdt1= homeActivity.getSdt1();
+        activity = (MainActivity1) getActivity();
+        sdt1= activity.getSdt1();
+        hoTen = activity.getHoten();
         anhxa();
+        hoten.setText("Ho Ten: "+hoTen);
         getlistuser(sdt1);
+
         return view;
     }
     private  void  anhxa(){
@@ -51,12 +56,12 @@ public class PhanUngTIemfragment extends Fragment {
         hoten = view.findViewById(R.id.put_hoten1);
         tenVacxin = view.findViewById(R.id.put_tenvacxin1);
         ngayTiem = view.findViewById(R.id.put_ngaytiem1);
-        thoiGian = view.findViewById(R.id.put_ngaytiem1);
+        thoiGian = view.findViewById(R.id.put_thoigian1);
         noiDung = view.findViewById(R.id.put_noidung1);
     }
     private void getlistuser(String sdt1){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myreb = database.getReference("user/"+sdt1+"/PhanUngNguoiDung");
+        DatabaseReference myreb = database.getReference("user/"+sdt1+"/PhanUngSauTiem");
         myreb.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -73,10 +78,12 @@ public class PhanUngTIemfragment extends Fragment {
         });
     }
     private void settext(){
-        hoten.setText(PUST.getHoTen());
-        tenVacxin.setText(PUST.getTenVacxin());
-        ngayTiem.setText(PUST.getNgayTiem());
-        thoiGian.setText(PUST.getThoiGian());
-        noiDung.setText(PUST.getNoidDung());
+
+        tenVacxin.setText("Loai Vacxin: "+PUST.getTenVacxin());
+        ngayTiem.setText("Ngay Tiem: "+PUST.getNgayTiem());
+        thoiGian.setText("Thoi gian tiem: "+PUST.getThoiGian());
+        noiDung.setText("Noi dung phan ung: "+PUST.getNoidDung());
     }
+
+
 }

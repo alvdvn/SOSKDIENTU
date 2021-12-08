@@ -13,6 +13,7 @@
         android:id="@+id/hoten"
         android:hint="Ho ten"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
 
         />
     <EditText
@@ -43,30 +44,12 @@
         android:hint="Gioi tinh"
         android:textColor="@color/black"
         android:textSize="15dp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup_diffLevel"
+    <EditText
+        android:id="@+id/edit3"
+        android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="30dp">
-
-
-        <RadioButton
-            android:id="@+id/radioButton_easy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:text="Nam" />
-
-        <RadioButton
-            android:id="@+id/radioButton_medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:text="Nữ" />
-    </RadioGroup>
-
+        android:inputType="datetime"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,11 +58,10 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp" />
     <EditText
-        android:id="@+id/edit3"
+        android:id="@+id/edit4"
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:inputType="number"/>
 
     <TextView
@@ -90,11 +72,10 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp" />
     <EditText
-        android:id="@+id/edit4"
+        android:id="@+id/edit5"
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:inputType="number"/>
 
     <TextView
@@ -105,11 +86,10 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp" />
     <EditText
-        android:id="@+id/edit5"
+        android:id="@+id/edit6"
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp" />
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btnTST"

@@ -1,25 +1,16 @@
 package com.example.soskdientu.model;
 
 public class PhanUngSauTiem {
-    private String hoTen,tenVacxin, ngayTiem,thoiGian,noidDung;
+    private String tenVacxin, ngayTiem,thoiGian,noidDung;
 
     public PhanUngSauTiem() {
     }
 
-    public PhanUngSauTiem(String hoTen, String tenVacxin, String ngayTiem, String thoiGian, String noidDung) {
-        this.hoTen = hoTen;
+    public PhanUngSauTiem(String tenVacxin, String ngayTiem, String thoiGian, String noidDung) {
         this.tenVacxin = tenVacxin;
         this.ngayTiem = ngayTiem;
         this.thoiGian = thoiGian;
         this.noidDung = noidDung;
-    }
-
-    public String getHoTen() {
-        return hoTen;
-    }
-
-    public void setHoTen(String hoTen) {
-        this.hoTen = hoTen;
     }
 
     public String getTenVacxin() {

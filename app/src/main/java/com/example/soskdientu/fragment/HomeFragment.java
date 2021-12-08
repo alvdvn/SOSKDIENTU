@@ -19,10 +19,13 @@ import com.example.soskdientu.activity.DatLichKham.SearchActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.HSSKhienthiActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.Hososuckhoe;
 import com.example.soskdientu.activity.MaSoSucKhoe.MaSoSKActivity;
+import com.example.soskdientu.activity.TiemChung.MainActivity1;
 import com.example.soskdientu.activity.khaibaoyte.man1;
 import com.example.soskdientu.activity.HomeActivity;
 import com.example.soskdientu.activity.TiemChung.PhanUngSauTiemActivity;
+import com.example.soskdientu.model.CaNhan;
 import com.example.soskdientu.model.HsSucKhoe;
+import com.example.soskdientu.model.PhanUngSauTiem;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -42,6 +45,9 @@ public class HomeFragment extends Fragment {
     HsSucKhoe hsSucKhoe;
     List<HsSucKhoe> hsSucKhoeList;
     HomeActivity homeActivity;
+    PhanUngSauTiem PUST;
+    CaNhan CN;
+    String ht;
     public HomeFragment() {
     }
 
@@ -57,9 +63,52 @@ public class HomeFragment extends Fragment {
             btnphanung.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), PhanUngSauTiemActivity.class);
-                    intent.putExtra("sdt",sdt);
-                  startActivity(intent);
+                    FirebaseDatabase database1 = FirebaseDatabase.getInstance();
+                    DatabaseReference myreb1 = database1.getReference("user/"+sdt+"/HoSoCaNhan");
+                    myreb1.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                            for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                                CN = dataSnapshot.getValue(CaNhan.class);
+                                ht = CN.getHoTen();
+                            }
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(getContext(), "ko thể kết nối sv", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference myreb = database.getReference("user/" + sdt + "/PhanUngSauTiem");
+                    myreb.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                                PUST = dataSnapshot.getValue(PhanUngSauTiem.class);
+
+                                if(PUST.getNoidDung() == null){
+                                    Intent intent = new Intent(getActivity(), PhanUngSauTiemActivity.class);
+                                    intent.putExtra("sdt",sdt);
+                                    intent.putExtra("hoten",ht);
+                                    startActivity(intent);
+                                }else {
+                                    Intent intent = new Intent(getActivity(), MainActivity1.class);
+                                    intent.putExtra("sdt",sdt);
+                                    intent.putExtra("hoten",ht);
+                                    startActivity(intent);
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(getContext(), "ko thể kết nối sv", Toast.LENGTH_SHORT).show();
+                        }
+
+                    });
 
                 }
             });

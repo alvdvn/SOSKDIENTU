@@ -18,14 +18,17 @@ import com.example.soskdientu.fragment.HomeFragment;
 import com.example.soskdientu.fragment.PhanUngTIemfragment;
 import com.example.soskdientu.model.CaNhan;
 import com.example.soskdientu.model.PhanUngSauTiem;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class PhanUngSauTiemActivity extends AppCompatActivity {
     EditText hoten,tenVacxin,ngayTiem,thoiGian,noidDung;
-    Button btn,btn1;
+    Button btn;
     String sdt1;
+    CaNhan CN;
 
 
     @Override
@@ -35,14 +38,14 @@ public class PhanUngSauTiemActivity extends AppCompatActivity {
         anhxa();
         Intent intent = getIntent();
         sdt1 = intent.getStringExtra("sdt");
-        hoten.setText(sdt1);
+        getlistuser(sdt1);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myreb = database.getReference("user/"+sdt1);
                 PhanUngSauTiem PhanUngSauTiem= new PhanUngSauTiem(
-                        hoten.getText().toString(),
                         tenVacxin.getText().toString(),
                         ngayTiem.getText().toString(),
                         thoiGian.getText().toString(),
@@ -51,16 +54,15 @@ public class PhanUngSauTiemActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                         Toast.makeText(getApplicationContext(), "Nhập thông tin thành công", Toast.LENGTH_SHORT).show();
+                        Intent intent1 = new Intent(PhanUngSauTiemActivity.this, MainActivity1.class);
+
+                        intent1.putExtra("sdt",sdt1);
+                        intent1.putExtra("hoten",hoten.getText().toString());
+                        startActivity(intent1);
+
                     }
                 });
 
-            }
-        });
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent1 = new Intent(PhanUngSauTiemActivity.this, MainActivity1.class);
-                startActivity(intent1);
             }
         });
 
@@ -72,10 +74,28 @@ public class PhanUngSauTiemActivity extends AppCompatActivity {
         thoiGian = findViewById(R.id.put_thoigian);
         noidDung = findViewById(R.id.put_noidung);
         btn = findViewById(R.id.btn_put);
-        btn1 = findViewById(R.id.btn_put1);
     }
 
     public String getSdt1() {
         return sdt1;
+    }
+
+    private void getlistuser(String sdt1){
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myreb = database.getReference("user/"+sdt1+"/HoSoCaNhan");
+        myreb.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    CN = dataSnapshot.getValue(CaNhan.class);
+                    hoten.setText(CN.getHoTen());
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getApplicationContext(), "ko thể kết nối sv", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
