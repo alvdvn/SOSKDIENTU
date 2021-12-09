@@ -26,30 +26,16 @@
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="75dp"
                 tools:layout_editor_absoluteY="31dp" />
-            <TextView
-                android:id="@+id/HT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Họ Tên"
-                tools:layout_editor_absoluteX="20dp"
-                tools:layout_editor_absoluteY="66dp" />
             <EditText
                 android:id="@+id/EDHT"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text=""
+                android:hint="Họ Tên : "
                 tools:layout_editor_absoluteX="25dp"
                 tools:layout_editor_absoluteY="261dp" />
 
-            <TextView
-                android:id="@+id/NS"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Năm Sinh"
-                tools:layout_editor_absoluteX="21dp"
-                tools:layout_editor_absoluteY="152dp" />
 
             <EditText
                 android:id="@+id/EDNS"
@@ -57,17 +43,10 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text=""
+                android:hint="Năm Sinh : "
                 tools:layout_editor_absoluteX="20dp"
                 tools:layout_editor_absoluteY="354dp" />
 
-            <TextView
-                android:id="@+id/CCCD"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Số CCCD"
-                tools:layout_editor_absoluteX="25dp"
-                tools:layout_editor_absoluteY="242dp" />
 
             <EditText
                 android:id="@+id/EDCCCD"
@@ -75,17 +54,10 @@
                 android:layout_height="57dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text=""
+                android:hint="CCCD : "
                 tools:layout_editor_absoluteX="21dp"
                 tools:layout_editor_absoluteY="447dp" />
 
-            <TextView
-                android:id="@+id/QT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Quốc Tịch"
-                tools:layout_editor_absoluteX="25dp"
-                tools:layout_editor_absoluteY="428dp" />
 
             <EditText
                 android:id="@+id/EDQT"
@@ -93,17 +65,10 @@
                 android:layout_height="56dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text=""
+                android:hint="Quốc Tịch : "
                 tools:layout_editor_absoluteX="22dp"
                 tools:layout_editor_absoluteY="171dp" />
 
-            <TextView
-                android:id="@+id/NOHT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nơi Ở Hiện Tại"
-                tools:layout_editor_absoluteX="25dp"
-                tools:layout_editor_absoluteY="335dp" />
 
             <EditText
                 android:id="@+id/EDNOHT"
@@ -111,17 +76,9 @@
                 android:layout_height="65dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text=""
+               android:hint="Địa Chỉ : "
                 tools:layout_editor_absoluteX="20dp"
                 tools:layout_editor_absoluteY="85dp" />
-
-            <TextView
-                android:id="@+id/SDT"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SĐT"
-                tools:layout_editor_absoluteX="25dp"
-                tools:layout_editor_absoluteY="428dp" />
 
             <EditText
                 android:id="@+id/EDSDT"
@@ -129,7 +86,7 @@
                 android:layout_height="64dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text=""
+                android:hint="SĐT : "
                 tools:layout_editor_absoluteX="22dp"
                 tools:layout_editor_absoluteY="171dp" />
 
