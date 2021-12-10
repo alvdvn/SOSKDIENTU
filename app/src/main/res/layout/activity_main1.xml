@@ -6,29 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".activity.TiemChung.MainActivity1"
     android:orientation="vertical">
-
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="100dp"
-        android:text="Đăng ký tiêm chủng"
-        />
-
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="100dp"
-        android:text="Phản ứng sau tiêm" />
-
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Chứng nhận tiêm chủng"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="80dp"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frg"/>
 </LinearLayout>

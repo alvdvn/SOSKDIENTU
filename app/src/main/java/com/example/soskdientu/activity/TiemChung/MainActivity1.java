@@ -2,41 +2,55 @@ package com.example.soskdientu.activity.TiemChung;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.soskdientu.R;
+import com.example.soskdientu.fragment.HoSoCaNhanFragment;
+import com.example.soskdientu.fragment.PhanUngTIemfragment;
 
 public class MainActivity1 extends AppCompatActivity {
-    Intent intent;
-    Button btn1,btn2,btn3;
-
+    String sdt1,hoten;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main1);
 
-        btn1 = findViewById(R.id.btn1);
-        btn2 = findViewById(R.id.btn2);
-        btn3 = findViewById(R.id.btn3);
+        Intent intent = getIntent();
+        sdt1 = intent.getStringExtra("sdt");
 
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(MainActivity1.this, DangKyTiemChungActivity.class);
-                startActivity(intent);
-            }
-        });
+        hoten = intent.getStringExtra("hoten");
 
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                intent = new Intent(MainActivity1.this,PhanUngSauTiemActivity.class);
-                startActivity(intent);
-            }
-        });
+        SendDataToFragment1();
+        SendDataToFragment2();
 
+
+        getSupportFragmentManager().beginTransaction().add(R.id.frg,new PhanUngTIemfragment()).commit();
+
+
+    }
+    private  void SendDataToFragment1(){
+        sdt1.trim();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frg,new PhanUngTIemfragment());
+        fragmentTransaction.commit();
+
+
+    }
+    private  void SendDataToFragment2(){
+        hoten.trim();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frg,new PhanUngTIemfragment());
+        fragmentTransaction.commit();
+
+
+    }
+
+    public String getSdt1() {
+        return sdt1;
+    }
+    public String getHoten(){
+        return hoten;
     }
 }

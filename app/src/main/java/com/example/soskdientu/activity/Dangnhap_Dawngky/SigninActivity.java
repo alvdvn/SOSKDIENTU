@@ -17,6 +17,7 @@ import com.example.soskdientu.R;
 import com.example.soskdientu.activity.CaNhanActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.Hososuckhoe;
 import com.example.soskdientu.model.Nguoidung;
+import com.example.soskdientu.model.PhanUngSauTiem;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -94,6 +95,16 @@ public class SigninActivity extends AppCompatActivity {
 
                 Nguoidung  user = new Nguoidung(sodt,mk);
                 myreb.child(user.getUsername()).child(user.getUsername()).setValue(user, new DatabaseReference.CompletionListener() {
+                    @Override
+                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                        Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(SigninActivity.this,CaNhanActivity.class);
+                        intent.putExtra("sdt",sodt);
+                        startActivity(intent);
+                    }
+                });
+                PhanUngSauTiem tiem = new PhanUngSauTiem();
+                myreb.child(user.getUsername()).child("PhanUngSauTiem").child("PhanUngNguoiDung").setValue(user, new DatabaseReference.CompletionListener() {
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                         Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_SHORT).show();

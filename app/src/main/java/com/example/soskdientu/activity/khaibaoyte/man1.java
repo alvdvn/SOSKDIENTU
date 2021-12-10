@@ -32,7 +32,7 @@ public class man1 extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(man1.this,man5.class);
+                Intent intent = new Intent(man1.this,man3.class);
                 intent.putExtra("sdt",sdt);
                 startActivity(intent);
             }

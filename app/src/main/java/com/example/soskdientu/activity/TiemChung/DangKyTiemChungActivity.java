@@ -16,15 +16,13 @@ import com.example.soskdientu.R;
 public class DangKyTiemChungActivity extends AppCompatActivity {
     Intent intent;
     Button btn;
-    EditText edit1;
+    EditText hoten,ngaysinh,gioitinh,soCMND,soBHYT,diachi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ky_tiem_chung);
-
-        btn = findViewById(R.id.btnTST);
-        edit1 = findViewById(R.id.edit1);
+        anhxa();
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,5 +31,13 @@ public class DangKyTiemChungActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    private void anhxa(){
+        hoten = findViewById(R.id.edit1);
+        ngaysinh = findViewById(R.id.edit2);
+        gioitinh = findViewById(R.id.edit3);
+        soCMND = findViewById(R.id.edit4);
+        soBHYT = findViewById(R.id.edit5);
+        diachi = findViewById(R.id.edit6);
     }
 }

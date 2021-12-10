@@ -48,7 +48,9 @@
             android:exported="false" />
         <activity
             android:name=".activity.TiemChung.PhanUngSauTiemActivity"
-            android:exported="false" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".activity.khaibaoyte.man3"
             android:exported="false" />
@@ -75,6 +77,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".activity.HomeActivity"
@@ -93,7 +96,9 @@
             android:exported="false" />
         <activity
             android:name=".activity.TiemChung.MainActivity1"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
     </application>
 
 </manifest>

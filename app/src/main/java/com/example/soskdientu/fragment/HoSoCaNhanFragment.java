@@ -45,9 +45,6 @@ public class HoSoCaNhanFragment extends Fragment {
     CaNhan caNhan;
     HomeActivity homeActivity ;
     Button btnupdate;
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -128,20 +125,13 @@ public class HoSoCaNhanFragment extends Fragment {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     caNhan = dataSnapshot.getValue(CaNhan.class);
                     settext();
-
                 }
-
-
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(getContext(), "ko thể kết nối sv", Toast.LENGTH_SHORT).show();
             }
-
         });
-
-
     }
 
     private void settext(){

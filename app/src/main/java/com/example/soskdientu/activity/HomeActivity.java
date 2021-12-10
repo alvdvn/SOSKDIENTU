@@ -69,13 +69,11 @@ public class HomeActivity extends AppCompatActivity {
         sdt1.trim();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.viewpager,new DatLichFragment());
-
-
-
         fragmentTransaction.commit();
 
 
     }
+
 
     public String getSdt1() {
         return sdt1;

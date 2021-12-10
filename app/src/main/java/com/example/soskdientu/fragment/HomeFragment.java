@@ -19,7 +19,6 @@ import com.example.soskdientu.activity.DatLichKham.SearchActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.HSSKhienthiActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.Hososuckhoe;
 import com.example.soskdientu.activity.MaSoSucKhoe.MaSoSKActivity;
-import com.example.soskdientu.activity.camnangyte.CamnangyteActivity;
 import com.example.soskdientu.activity.khaibaoyte.man1;
 import com.example.soskdientu.activity.HomeActivity;
 import com.example.soskdientu.activity.TiemChung.PhanUngSauTiemActivity;
@@ -35,7 +34,7 @@ import java.util.List;
 
 
 public class HomeFragment extends Fragment {
-    ImageView Khaibao,Hososk,datlich,cnyt;
+    ImageView Khaibao,Hososk,datlich;
     TextView hoten;
     View view;
     String sdt;
@@ -62,13 +61,6 @@ public class HomeFragment extends Fragment {
                     intent.putExtra("sdt",sdt);
                   startActivity(intent);
 
-                }
-            });
-            cnyt.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), CamnangyteActivity.class);
-                    startActivity(intent);
                 }
             });
             datlich.setOnClickListener(new View.OnClickListener() {
@@ -115,7 +107,6 @@ public class HomeFragment extends Fragment {
         Hososk = view.findViewById(R.id.hososk);
         Khaibao = view.findViewById(R.id.khaibao);
         btnmasosk = view.findViewById(R.id.masosk);
-        cnyt=view.findViewById(R.id.camnang);
     }
     private void  getHSSK(String sdt1){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
