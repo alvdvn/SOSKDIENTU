@@ -43,6 +43,7 @@ Button btnluu2;
         btnluu2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myreb = database.getReference("user/"+sdt);
                 HsSucKhoe hsSucKhoe = new HsSucKhoe(
@@ -53,13 +54,20 @@ Button btnluu2;
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                         Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_SHORT).show();
-                        Intent intent2 = new Intent(Hososuckhoe.this, HSSKhienthiActivity.class);
+                        Intent intent2 = new Intent(Hososuckhoe.this, HomeActivity.class);
                         intent2.putExtra("sdt",sdt);
                         startActivity(intent2);
                     }
                 });
             }
         });
+//        huy.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                dialog.dismiss();
+//            }
+//        });
+
     }
     public void anhxa(){
         ht2=findViewById(R.id.et_hovaten2);
@@ -79,6 +87,11 @@ Button btnluu2;
 
 
     }
+//    private void clear(){
+//        h.setText("");
+//        pass.setText("");
+//        repass.setText("");
+//    }
 //    private void getlistuser(){
 //        FirebaseDatabase database = FirebaseDatabase.getInstance();
 //        DatabaseReference   myreb = database.getReference("user");

@@ -67,7 +67,7 @@ public class HoSoCaNhanFragment extends Fragment {
                 ht3=view.findViewById(R.id.et_hovaten3);
                 gt3=view.findViewById(R.id.et_gioitinh3);
                 ns3=view.findViewById(R.id.et_namsinh3);
-                sdt13=view.findViewById(R.id.et_sodienthoai3);
+//                sdt13=view.findViewById(R.id.et_sodienthoai3);
                 scc3=view.findViewById(R.id.et_socancuoc3);
                 dc3=view.findViewById(R.id.et_diachi3);
                 sbhyt3=view.findViewById(R.id.et_sothebaohiemyte3);
@@ -145,7 +145,7 @@ public class HoSoCaNhanFragment extends Fragment {
     }
 
     private void settext(){
-        sdt1.setText(sdt);
+        sdt1.setText("SĐT: "+sdt);
         ht.setText("Họ và tên: "+caNhan.getHoTen());
         dc.setText("Địa chỉ: "+caNhan.getDiaChi());
         ns.setText(" Ngày sinh: " +caNhan.getNamSinh());

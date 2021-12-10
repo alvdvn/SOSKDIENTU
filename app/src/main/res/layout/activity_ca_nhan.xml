@@ -128,6 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginEnd="20dp"
+                android:backgroundTint="#E375E1"
                 android:drawableLeft="@drawable/ic_baseline_save_24"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"

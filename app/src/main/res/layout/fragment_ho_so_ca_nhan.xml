@@ -6,32 +6,16 @@
 
     android:orientation="vertical"
     tools:context=".fragment.HoSoCaNhanFragment">
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_marginTop="30dp"-->
-<!--        android:text="Thông tin Cá Nhân "-->
-<!--        android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
-<!--        android:textSize="16pt"-->
-<!--        android:textStyle="bold" />-->
-
-    <!-- TODO: Update blank fragment layout -->
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/rv_data_thanhvien"-->
-<!--        android:layout_width="match_parent"-->
-
-<!--        android:layout_height="match_parent" />-->
-
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/btn_fl_them_thanhvien"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentRight="true"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginRight="16dp"-->
-<!--        android:layout_marginBottom="16dp"-->
-<!--        android:src="@drawable/ic_baseline_add_24" />-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#58DFB4"
+        android:gravity="center"
+        android:text="Hồ Sơ Cá Nhân "
+        android:textColor="#F9FAFB"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_hoten1"
@@ -116,36 +100,40 @@
     <TextView
         android:id="@+id/tv_thoihanden1"
         android:text="Thời hạn đến ngày:"
-        android:textColor="#f00"
+        android:textColor="#9C27B0"
         android:textStyle="bold"
         android:padding="3dp"
-        android:textSize="14sp"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_below="@+id/tv_thoihantu"
         android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/tv_quoctich1"
         android:text="Quốc tịch:"
-        android:textColor="#f00"
+        android:textColor="#E91E63"
         android:textStyle="bold"
         android:padding="3dp"
-        android:textSize="14sp"
+        android:textSize="20sp"
         android:layout_below="@+id/tv_thoihanden"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/tv_tongiao1"
         android:text="Tôn Giáo:"
-        android:textColor="#f00"
+        android:textColor="#3F51B5"
         android:textStyle="bold"
         android:padding="3dp"
-        android:textSize="14sp"
+        android:textSize="20sp"
         android:layout_below="@+id/tv_quoctich"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 <Button
-    android:layout_width="match_parent"
+    android:layout_width="140dp"
     android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginLeft="130dp"
+    android:backgroundTint="#58DFB4"
+    android:drawableLeft="@drawable/ic_baseline_save_24"
     android:text="update"
     android:id="@+id/btnupdate"/>
 

@@ -4,8 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:orientation="vertical"
     tools:context=".activity.HoSoSucKhoe.HSSKhienthiActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#58DFB4"
+        android:gravity="center"
+        android:text="Hồ Sơ Sức Khỏe "
+        android:textColor="#F9FAFB"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold" />
     <TextView
         android:id="@+id/tv_hoten2"
         android:text="Họ tên:"
@@ -80,10 +91,10 @@
     <TextView
         android:id="@+id/tv_huyetap2"
         android:text="Huyết áp:"
-        android:textColor="#f00"
+        android:textColor="#9C27B0"
         android:textStyle="bold"
         android:padding="3dp"
-        android:textSize="14sp"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_below="@+id/tv_nhietdo2"
         android:layout_height="wrap_content"/>
@@ -93,43 +104,47 @@
         android:textColor="#f00"
         android:textStyle="bold"
         android:padding="3dp"
-        android:textSize="14sp"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_below="@+id/tv_huyetap2"
         android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/tv_nhiptim2"
         android:text="Nhịp tim:"
-        android:textColor="#f00"
+        android:textColor="#009688"
         android:textStyle="bold"
         android:padding="3dp"
-        android:textSize="14sp"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_below="@+id/tv_nhommau2"
         android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/tv_chieucao2"
         android:text="Chiều cao:"
-        android:textColor="#f00"
+        android:textColor="#3F51B5"
         android:textStyle="bold"
         android:padding="3dp"
-        android:textSize="14sp"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_below="@+id/tv_nhommau2"
         android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/tv_cannang2"
         android:text="Cân nặng :"
-        android:textColor="#f00"
+        android:textColor="#FF9800"
         android:textStyle="bold"
         android:padding="3dp"
-        android:textSize="14sp"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_below="@+id/tv_chieucao2"
         android:layout_height="wrap_content"/>
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:text="update"
+       android:gravity="center"
+        android:layout_marginLeft="130dp"
+        android:backgroundTint="#58DFB4"
+        android:drawableLeft="@drawable/ic_baseline_save_24"
+        android:text="Update "
         android:id="@+id/btnupdate5"/>
 </LinearLayout>

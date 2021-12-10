@@ -150,20 +150,20 @@ public class HSSKhienthiActivity extends AppCompatActivity {
 
 
     private void settext(){
-        sdt4.setText(sdt);
-        cc.setText(hsSucKhoe.getChieuCao());
-        cn.setText(hsSucKhoe.getCanNang());
-        nd.setText(hsSucKhoe.getNhietDo());
-        ha.setText(hsSucKhoe.getHuyetAp());
-        nt.setText(hsSucKhoe.getNhipTim());
-        nm.setText(hsSucKhoe.getNhomMau());
+        sdt4.setText("Số Điện thoại:"+sdt);
+        cc.setText("Chiều Cao: "+hsSucKhoe.getChieuCao());
+        cn.setText("Cân nặng: "+hsSucKhoe.getCanNang());
+        nd.setText("Nhiệt độ: "+hsSucKhoe.getNhietDo());
+        ha.setText("Huyết áp: "+hsSucKhoe.getHuyetAp());
+        nt.setText("Nhịp tim: "+hsSucKhoe.getNhipTim());
+        nm.setText("Nhóm máu: "+hsSucKhoe.getNhomMau());
     }
     private void settext1(){
         sdt4.setText(sdt);
-        ht.setText(caNhan.getHoTen());
-        gt.setText(caNhan.getHoTen());
-        ns.setText(caNhan.getNamSinh());
-        scc.setText(caNhan.getSoCanCuoc());
-        sbhyt.setText(caNhan.getSoTheBaoHiemYTe());
+        ht.setText("Họ tên: "+caNhan.getHoTen());
+        gt.setText("Giới Tính: "+caNhan.getHoTen());
+        ns.setText("Ngày sinh: " +caNhan.getNamSinh());
+        scc.setText("Số Căn Cước: "+caNhan.getSoCanCuoc());
+        sbhyt.setText("Số BHYT: "+caNhan.getSoTheBaoHiemYTe());
     }
 }

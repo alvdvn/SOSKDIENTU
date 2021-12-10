@@ -1,13 +1,13 @@
 package com.example.soskdientu.activity.MaSoSucKhoe;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.soskdientu.R;
 import com.example.soskdientu.model.CaNhan;
