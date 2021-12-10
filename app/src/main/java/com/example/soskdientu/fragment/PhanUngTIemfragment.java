@@ -1,5 +1,8 @@
 package com.example.soskdientu.fragment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.soskdientu.R;
@@ -37,6 +41,7 @@ public class PhanUngTIemfragment extends Fragment {
     HomeActivity homeActivity;
     MainActivity1 activity;
     CaNhan CN;
+    Button btn1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,6 +54,28 @@ public class PhanUngTIemfragment extends Fragment {
         hoten.setText("Ho Ten: "+hoTen);
         getlistuser(sdt1);
 
+//        btn1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                new AlertDialog.Builder( getActivity())
+//                        .setTitle("RealtimeDatabase").setMessage("Ban muon xoa noi dung phan ung tiem nay khong?")
+//                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialogInterface, int i) {
+//                                FirebaseDatabase database = FirebaseDatabase.getInstance();
+//                                DatabaseReference myref = database.getReference("user/"+sdt1+"/PhanUngSauTiem");
+//                                myref.removeValue(new DatabaseReference.CompletionListener() {
+//                                    @Override
+//                                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+//                                        Toast.makeText(getContext(),"Xoa thanh cong",Toast.LENGTH_SHORT).show();
+//                                    }
+//                                });
+//                            }
+//                        });
+//
+//            }
+//        });
+
         return view;
     }
     private  void  anhxa(){
@@ -58,6 +85,7 @@ public class PhanUngTIemfragment extends Fragment {
         ngayTiem = view.findViewById(R.id.put_ngaytiem1);
         thoiGian = view.findViewById(R.id.put_thoigian1);
         noiDung = view.findViewById(R.id.put_noidung1);
+        btn1 = view.findViewById(R.id.btn_xoa);
     }
     private void getlistuser(String sdt1){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -84,6 +112,26 @@ public class PhanUngTIemfragment extends Fragment {
         thoiGian.setText("Thoi gian tiem: "+PUST.getThoiGian());
         noiDung.setText("Noi dung phan ung: "+PUST.getNoidDung());
     }
+    private void onClickDeletePUST(){
+        new AlertDialog.Builder( getActivity())
+                .setTitle("RealtimeDatabase").setMessage("Ban muon xoa noi dung phan ung tiem nay khong?")
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+                        DatabaseReference myref = database.getReference("user/"+sdt1+"/PhanUngSauTiem");
+                        myref.removeValue(new DatabaseReference.CompletionListener() {
+                            @Override
+                            public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                                Toast.makeText(getContext(),"Xoa thanh cong",Toast.LENGTH_SHORT).show();
+//                                Intent intent1 = new Intent(PhanUngSauTiemActivity.this, MainActivity1.class);
+
+                            }
+                        });
+                    }
+                });
+    }
+
 
 
 }

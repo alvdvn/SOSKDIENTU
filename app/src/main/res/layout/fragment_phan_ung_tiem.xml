@@ -96,6 +96,21 @@
             android:textColor="#050505"
             android:textSize="20sp"
             android:textStyle="bold" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sửa nội dung"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="40dp"
+            android:id="@+id/btn_sua"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xoa noi dung"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/btn_xoa"
+            android:onClick="onClickDeletePUST"/>
 
 
     </LinearLayout>
