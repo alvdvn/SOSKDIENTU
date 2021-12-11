@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.soskdientu.R;
 import com.example.soskdientu.activity.CaNhanActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.Hososuckhoe;
+import com.example.soskdientu.model.HsSucKhoe;
 import com.example.soskdientu.model.Nguoidung;
 import com.example.soskdientu.model.PhanUngSauTiem;
 import com.google.firebase.database.DataSnapshot;
@@ -104,13 +105,17 @@ public class SigninActivity extends AppCompatActivity {
                     }
                 });
                 PhanUngSauTiem tiem = new PhanUngSauTiem();
-                myreb.child(user.getUsername()).child("PhanUngSauTiem").child("PhanUngNguoiDung").setValue(user, new DatabaseReference.CompletionListener() {
+                myreb.child(user.getUsername()).child("PhanUngSauTiem").child("PhanUngNguoiDung").setValue(tiem, new DatabaseReference.CompletionListener() {
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                        Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(SigninActivity.this,CaNhanActivity.class);
-                        intent.putExtra("sdt",sodt);
-                        startActivity(intent);
+
+                    }
+                });
+                HsSucKhoe hssk = new HsSucKhoe();
+                myreb.child(user.getUsername()).child("HoSoSuckhoe").child("hoso").setValue(hssk, new DatabaseReference.CompletionListener() {
+                    @Override
+                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+
                     }
                 });
 

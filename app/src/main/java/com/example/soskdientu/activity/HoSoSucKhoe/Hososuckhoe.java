@@ -15,6 +15,7 @@ import com.example.soskdientu.R;
 import com.example.soskdientu.activity.CaNhanActivity;
 import com.example.soskdientu.activity.HomeActivity;
 import com.example.soskdientu.fragment.HsSucKhoeFragment;
+import com.example.soskdientu.model.CaNhan;
 import com.example.soskdientu.model.HsSucKhoe;
 import com.example.soskdientu.model.Nguoidung;
 import com.google.firebase.database.DataSnapshot;
@@ -29,6 +30,7 @@ import java.util.List;
 public class Hososuckhoe extends AppCompatActivity {
 EditText ht2,sdt2,ns2,gt2,scc2,sbhyt2,nd2,ha2,cc2,cn2,nt2,nm2;
 Button btnluu2;
+CaNhan caNhan;
 //List<HsSucKhoe> listsk;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +41,17 @@ Button btnluu2;
         anhxa();
         Intent intent = getIntent();
         String sdt = intent.getStringExtra("sdt");
-        sdt2.setText(sdt);
+        getlistuser(sdt);
+
         btnluu2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(cc2.getText().toString().isEmpty()||cn2.getText().toString().isEmpty()||nt2.getText().toString().isEmpty()||
+                nm2.getText().toString().isEmpty()||nd2.getText().toString().isEmpty()||ha2.getText().toString().isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Mời nhập đầy đủ thông tin trước khi xác nhận", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
 
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myreb = database.getReference("user/"+sdt);
@@ -54,7 +63,7 @@ Button btnluu2;
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                         Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_SHORT).show();
-                        Intent intent2 = new Intent(Hososuckhoe.this, HomeActivity.class);
+                        Intent intent2 = new Intent(Hososuckhoe.this, HSSKhienthiActivity.class);
                         intent2.putExtra("sdt",sdt);
                         startActivity(intent2);
                     }
@@ -87,32 +96,31 @@ Button btnluu2;
 
 
     }
-//    private void clear(){
-//        h.setText("");
-//        pass.setText("");
-//        repass.setText("");
-//    }
-//    private void getlistuser(){
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference   myreb = database.getReference("user");
-//        myreb.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                for (DataSnapshot dataSnapshot:snapshot.getChildren()){
-//                    HsSucKhoe hsSucKhoe =dataSnapshot.getValue(HsSucKhoe.class);
-//                    listsk.add(hsSucKhoe);
-////                    Nguoidung nguoidung = dataSnapshot.getValue(Nguoidung.class);
-////                    listnd.add(nguoidung);
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                Toast.makeText(getApplicationContext(), "ko thể kết nối sv", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//
-//
-//    }
+    private void getlistuser(String sdt1){
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myreb = database.getReference("user/"+sdt1+"/HoSoCaNhan");
+        myreb.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    caNhan = dataSnapshot.getValue(CaNhan.class);
+
+                }
+                ht2.setText(caNhan.getHoTen());
+                gt2.setText(caNhan.getGioiTinh());
+                ns2.setText(caNhan.getNamSinh());
+                sdt2.setText(sdt1);
+                scc2.setText(caNhan.getSoCanCuoc());
+                sbhyt2.setText(caNhan.getSoTheBaoHiemYTe());
+
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getApplicationContext(), "ko thể kết nối sv", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
 }

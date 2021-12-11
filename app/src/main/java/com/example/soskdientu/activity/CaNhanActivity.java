@@ -57,7 +57,7 @@ Button btnluu;
                  @Override
                  public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                      Toast.makeText(getApplicationContext(), "Lưu thành công", Toast.LENGTH_SHORT).show();
-                     Intent intent1 = new Intent(CaNhanActivity.this, Hososuckhoe.class);
+                     Intent intent1 = new Intent(CaNhanActivity.this, HomeActivity.class);
                      intent1.putExtra("sdt",sdt);
                      startActivity(intent1);
                  }

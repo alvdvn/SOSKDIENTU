@@ -77,11 +77,12 @@ public class PhanUngTIemfragment extends Fragment {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder builder1 = new AlertDialog.Builder(getContext());
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(getActivity());
                 View view1 = LayoutInflater.from(getContext()).inflate(R.layout.dialog_phanungsautiem, null);
                 builder1.setView(view1);
                 Dialog dialog = builder1.create();
                 dialog.show();
+                hoten3 = view1.findViewById(R.id.put_hoten3);
                 tenVacxin3 = view1.findViewById(R.id.put_tenvacxin3);
                 ngayTiem3 = view1.findViewById(R.id.put_ngaytiem3);
                 thoiGian3 = view1.findViewById(R.id.put_thoigian3);
@@ -91,13 +92,13 @@ public class PhanUngTIemfragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         FirebaseDatabase database = FirebaseDatabase.getInstance();
-                        DatabaseReference myreb = database.getReference("user/"+sdt1+"/PhanUngSauTiem");
+                        DatabaseReference myreb = database.getReference("user/"+sdt1);
                         PhanUngSauTiem PU= new PhanUngSauTiem(
                                 tenVacxin3.getText().toString()
                                 ,ngayTiem3.getText().toString()
                                 ,thoiGian3.getText().toString()
                                 ,noiDung3.getText().toString());
-                        myreb.child("PhanUngSauTiem").child("PhanUngNguoiDung").setValue(PU, new DatabaseReference.CompletionListener() {
+                        myreb.child("PhanUngSauTiem").setValue(PU, new DatabaseReference.CompletionListener() {
                             @Override
                             public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                                 Toast.makeText(getContext(), "update thành công", Toast.LENGTH_SHORT).show();

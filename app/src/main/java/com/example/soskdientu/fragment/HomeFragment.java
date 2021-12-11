@@ -20,10 +20,13 @@ import com.example.soskdientu.activity.HoSoSucKhoe.HSSKhienthiActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.Hososuckhoe;
 import com.example.soskdientu.activity.MaSoSucKhoe.MaSoSKActivity;
 import com.example.soskdientu.activity.TiemChung.DangKyTiemChungActivity;
+import com.example.soskdientu.activity.TiemChung.MainActivity1;
 import com.example.soskdientu.activity.khaibaoyte.man1;
 import com.example.soskdientu.activity.HomeActivity;
 import com.example.soskdientu.activity.TiemChung.PhanUngSauTiemActivity;
+import com.example.soskdientu.model.CaNhan;
 import com.example.soskdientu.model.HsSucKhoe;
+import com.example.soskdientu.model.PhanUngSauTiem;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -41,8 +44,10 @@ public class HomeFragment extends Fragment {
     String sdt;
     ImageView btnphanung,btnmasosk,btndktiemchung;
     HsSucKhoe hsSucKhoe;
+    CaNhan caNhan;
     List<HsSucKhoe> hsSucKhoeList;
     HomeActivity homeActivity;
+    PhanUngSauTiem phanung1;
     public HomeFragment() {
     }
 
@@ -55,12 +60,60 @@ public class HomeFragment extends Fragment {
             anhxa();
             sdt = homeActivity.getSdt1();
             hoten.setText(sdt);
+            phanung1 = new PhanUngSauTiem();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myreb = database.getReference("user/"+sdt+"/HoSoCaNhan");
+        myreb.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    caNhan = dataSnapshot.getValue(CaNhan.class);
+                    hoten.setText(caNhan.getHoTen());
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getContext(), "ko thể kết nối sv", Toast.LENGTH_SHORT).show();
+            }
+        });
             btnphanung.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), PhanUngSauTiemActivity.class);
-                    intent.putExtra("sdt",sdt);
-                  startActivity(intent);
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference myreb = database.getReference("user/" + sdt + "/PhanUngSauTiem");
+                    myreb.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                                phanung1 = dataSnapshot.getValue(PhanUngSauTiem.class);
+
+
+                            }
+                            if(phanung1.getThoiGian()==null){
+                                Intent intent = new Intent(getActivity(), PhanUngSauTiemActivity.class);
+                                intent.putExtra("sdt",sdt);
+
+                                startActivity(intent);
+                            }else {
+                                Intent intent = new Intent(getActivity(), MainActivity1.class);
+                                intent.putExtra("sdt", sdt);
+                                intent.putExtra("hoten",hoten.getText().toString());
+                                startActivity(intent);
+                            }
+
+
+
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(getContext(), "ko thể kết nối sv", Toast.LENGTH_SHORT).show();
+                        }
+
+                    });
+
 
                 }
             });
@@ -75,7 +128,37 @@ public class HomeFragment extends Fragment {
             Hososk.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    getHSSK(sdt);
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference myreb = database.getReference("user/" + sdt + "/HoSoSuckhoe");
+                    myreb.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                            for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                                hsSucKhoe = dataSnapshot.getValue(HsSucKhoe.class);
+
+
+                            }
+                            if(hsSucKhoe.getCanNang()==null){
+                                Intent intent = new Intent(getActivity(), Hososuckhoe.class);
+                                intent.putExtra("sdt",sdt);
+                                startActivity(intent);
+                            }else {
+                                Intent intent = new Intent(getActivity(), HSSKhienthiActivity.class);
+                                intent.putExtra("sdt", sdt);
+                                startActivity(intent);
+                            }
+
+
+
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            Toast.makeText(getContext(), "ko thể kết nối sv", Toast.LENGTH_SHORT).show();
+                        }
+
+                    });
 
                 }
             });
@@ -118,40 +201,9 @@ public class HomeFragment extends Fragment {
         Khaibao = view.findViewById(R.id.khaibao);
         btnmasosk = view.findViewById(R.id.masosk);
         btndktiemchung = view.findViewById(R.id.dktiemChung);
+        caNhan = new CaNhan();
     }
-    private void  getHSSK(String sdt1){
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myreb = database.getReference("user/" + sdt1 + "/HoSoSucKhoe");
-        myreb.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    hsSucKhoe = dataSnapshot.getValue(HsSucKhoe.class);
-                    hsSucKhoeList.add(hsSucKhoe);
-
-                }
-                if(hsSucKhoeList!=null){
-                    Intent intent = new Intent(getActivity(), HSSKhienthiActivity.class);
-                    intent.putExtra("sdt",sdt);
-                    startActivity(intent);
-                }else {
-                    Intent intent = new Intent(getActivity(), Hososuckhoe.class);
-                    intent.putExtra("sdt", sdt);
-                    startActivity(intent);
-                }
-
-
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(getContext(), "ko thể kết nối sv", Toast.LENGTH_SHORT).show();
-            }
-
-        });
-    }
 
 
 }

@@ -33,7 +33,7 @@ public class DangKyTiemChungActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ky_tiem_chung);
         anhxa();
-        setOnclickTiepTheo();
+//        setOnclickTiepTheo();
         Intent intent = getIntent();
         sdt= intent.getStringExtra("sdt");
         getlistuser(sdt);
@@ -74,10 +74,10 @@ public class DangKyTiemChungActivity extends AppCompatActivity {
             }
         });
     }
-    private void setOnclickTiepTheo(){
-        Intent intent1 = new Intent(DangKyTiemChungActivity.this,TiemSuTiemActivity.class);
-        startActivity(intent1);
-    }
+//    private void setOnclickTiepTheo(){
+//        Intent intent1 = new Intent(DangKyTiemChungActivity.this,TiemSuTiemActivity.class);
+//        startActivity(intent1);
+//    }
     private void settext(){
         hoten.setText(caNhan.getHoTen());
         ngaysinh.setText(caNhan.getNamSinh());
