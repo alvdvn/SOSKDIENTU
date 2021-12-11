@@ -19,6 +19,7 @@ import com.example.soskdientu.activity.DatLichKham.SearchActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.HSSKhienthiActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.Hososuckhoe;
 import com.example.soskdientu.activity.MaSoSucKhoe.MaSoSKActivity;
+import com.example.soskdientu.activity.TiemChung.DangKyTiemChungActivity;
 import com.example.soskdientu.activity.khaibaoyte.man1;
 import com.example.soskdientu.activity.HomeActivity;
 import com.example.soskdientu.activity.TiemChung.PhanUngSauTiemActivity;
@@ -38,7 +39,7 @@ public class HomeFragment extends Fragment {
     TextView hoten;
     View view;
     String sdt;
-    ImageView btnphanung,btnmasosk;
+    ImageView btnphanung,btnmasosk,btndktiemchung;
     HsSucKhoe hsSucKhoe;
     List<HsSucKhoe> hsSucKhoeList;
     HomeActivity homeActivity;
@@ -94,10 +95,19 @@ public class HomeFragment extends Fragment {
                             startActivity(intent);
                 }
             });
+            btndktiemchung.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(),DangKyTiemChungActivity.class);
+                    intent.putExtra("sdt",sdt);
+                    startActivity(intent);
+                }
+            });
 
         return view;
 
     }
+
     private void anhxa(){
         hsSucKhoeList = new ArrayList<>();
         hsSucKhoe = new HsSucKhoe();
@@ -107,6 +117,7 @@ public class HomeFragment extends Fragment {
         Hososk = view.findViewById(R.id.hososk);
         Khaibao = view.findViewById(R.id.khaibao);
         btnmasosk = view.findViewById(R.id.masosk);
+        btndktiemchung = view.findViewById(R.id.dktiemChung);
     }
     private void  getHSSK(String sdt1){
         FirebaseDatabase database = FirebaseDatabase.getInstance();

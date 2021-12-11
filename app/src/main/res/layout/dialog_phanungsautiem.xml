@@ -1,6 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_layout">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Màn hình sửa phản ứng sau tiêm"
+        android:textColor="@color/black"
+        android:textSize="12pt"
+        android:textStyle="bold"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="666dp"
+        android:background="@drawable/bogoclayout"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Chi tiết phản ứng"
+            android:textColor="@color/black"
+            android:textSize="12pt"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/put_hoten3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:padding="3dp"
+            android:text="Họ tên:"
+            android:textColor="#050505"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/put_tenvacxin3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/put_hoten1"
+            android:layout_marginLeft="10dp"
+            android:padding="3dp"
+            android:text="Ten vacxin: "
+            android:textColor="#050505"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/put_ngaytiem3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/put_tenvacxin1"
+            android:layout_marginLeft="10dp"
+            android:padding="3dp"
+            android:text="Ngay tiem: "
+            android:textColor="#050505"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/put_thoigian3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/put_ngaytiem1"
+            android:layout_marginLeft="10dp"
+            android:padding="3dp"
+            android:text="Thoi gian xay ra phan ung: "
+            android:textColor="#050505"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/put_noidung3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/put_thoigian1"
+            android:layout_marginLeft="10dp"
+            android:padding="3dp"
+            android:text="Noi dung: "
+            android:textColor="#050505"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/btnLuu3"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:drawableLeft="@drawable/ic_baseline_save_24"
+            android:paddingLeft="5dp"
+            android:backgroundTint="#E91E63"
+            android:paddingRight="5dp"
+            android:text="Update" />
+
+    </LinearLayout>
+
+</LinearLayout>

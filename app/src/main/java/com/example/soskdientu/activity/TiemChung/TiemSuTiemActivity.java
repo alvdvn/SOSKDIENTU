@@ -34,5 +34,6 @@ public class TiemSuTiemActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }

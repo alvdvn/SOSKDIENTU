@@ -1,6 +1,6 @@
 package com.example.soskdientu.fragment;
 
-import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,15 +8,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.example.soskdientu.R;
 import com.example.soskdientu.activity.HomeActivity;
+import com.example.soskdientu.activity.TiemChung.DangKyTiemChungActivity;
 import com.example.soskdientu.activity.TiemChung.MainActivity1;
 import com.example.soskdientu.activity.TiemChung.PhanUngSauTiemActivity;
 import com.example.soskdientu.model.CaNhan;
@@ -36,12 +39,13 @@ public class PhanUngTIemfragment extends Fragment {
     View view;
     String sdt1,hoTen;
     TextView hoten,tenVacxin,ngayTiem,thoiGian,noiDung;
+    EditText hoten3,tenVacxin3,ngayTiem3,thoiGian3,noiDung3;
     List<PhanUngSauTiem> listPUST;
     PhanUngSauTiem PUST;
     HomeActivity homeActivity;
     MainActivity1 activity;
     CaNhan CN;
-    Button btn1;
+    Button btn1,btn2,btn3;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -54,27 +58,59 @@ public class PhanUngTIemfragment extends Fragment {
         hoten.setText("Ho Ten: "+hoTen);
         getlistuser(sdt1);
 
-//        btn1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                new AlertDialog.Builder( getActivity())
-//                        .setTitle("RealtimeDatabase").setMessage("Ban muon xoa noi dung phan ung tiem nay khong?")
-//                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialogInterface, int i) {
-//                                FirebaseDatabase database = FirebaseDatabase.getInstance();
-//                                DatabaseReference myref = database.getReference("user/"+sdt1+"/PhanUngSauTiem");
-//                                myref.removeValue(new DatabaseReference.CompletionListener() {
-//                                    @Override
-//                                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-//                                        Toast.makeText(getContext(),"Xoa thanh cong",Toast.LENGTH_SHORT).show();
-//                                    }
-//                                });
-//                            }
-//                        });
-//
-//            }
-//        });
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myeref = database.getReference("user/"+sdt1+"/PhanUngSauTiem");
+                myeref.removeValue(new DatabaseReference.CompletionListener() {
+                    @Override
+                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                        Toast.makeText(getContext(),"Xoa thanh cong",Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getActivity(), PhanUngSauTiemActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(getContext());
+                View view1 = LayoutInflater.from(getContext()).inflate(R.layout.dialog_phanungsautiem, null);
+                builder1.setView(view1);
+                Dialog dialog = builder1.create();
+                dialog.show();
+                tenVacxin3 = view1.findViewById(R.id.put_tenvacxin3);
+                ngayTiem3 = view1.findViewById(R.id.put_ngaytiem3);
+                thoiGian3 = view1.findViewById(R.id.put_thoigian3);
+                noiDung3 = view1.findViewById(R.id.put_noidung3);
+                btn3=view.findViewById(R.id.btnLuu3);
+                btn3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+                        DatabaseReference myreb = database.getReference("user/"+sdt1+"/PhanUngSauTiem");
+                        PhanUngSauTiem PU= new PhanUngSauTiem(
+                                tenVacxin3.getText().toString()
+                                ,ngayTiem3.getText().toString()
+                                ,thoiGian3.getText().toString()
+                                ,noiDung3.getText().toString());
+                        myreb.child("PhanUngSauTiem").child("PhanUngNguoiDung").setValue(PU, new DatabaseReference.CompletionListener() {
+                            @Override
+                            public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                                Toast.makeText(getContext(), "update thành công", Toast.LENGTH_SHORT).show();
+
+
+                            }
+                        });
+
+                    }
+                });
+            }
+
+        });
 
         return view;
     }
@@ -86,6 +122,7 @@ public class PhanUngTIemfragment extends Fragment {
         thoiGian = view.findViewById(R.id.put_thoigian1);
         noiDung = view.findViewById(R.id.put_noidung1);
         btn1 = view.findViewById(R.id.btn_xoa);
+        btn2 = view.findViewById(R.id.btn_sua);
     }
     private void getlistuser(String sdt1){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -112,26 +149,5 @@ public class PhanUngTIemfragment extends Fragment {
         thoiGian.setText("Thoi gian tiem: "+PUST.getThoiGian());
         noiDung.setText("Noi dung phan ung: "+PUST.getNoidDung());
     }
-    private void onClickDeletePUST(){
-        new AlertDialog.Builder( getActivity())
-                .setTitle("RealtimeDatabase").setMessage("Ban muon xoa noi dung phan ung tiem nay khong?")
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        FirebaseDatabase database = FirebaseDatabase.getInstance();
-                        DatabaseReference myref = database.getReference("user/"+sdt1+"/PhanUngSauTiem");
-                        myref.removeValue(new DatabaseReference.CompletionListener() {
-                            @Override
-                            public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
-                                Toast.makeText(getContext(),"Xoa thanh cong",Toast.LENGTH_SHORT).show();
-//                                Intent intent1 = new Intent(PhanUngSauTiemActivity.this, MainActivity1.class);
-
-                            }
-                        });
-                    }
-                });
-    }
-
-
 
 }

@@ -21,6 +21,7 @@ public class man1 extends AppCompatActivity {
         sdt = intent.getStringExtra("sdt");
         button=findViewById(R.id.btnKhaibao);
         btn1=findViewById(R.id.btnChitiet);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

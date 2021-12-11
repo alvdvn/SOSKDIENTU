@@ -65,7 +65,6 @@ public class PhanUngSauTiemActivity extends AppCompatActivity {
 
             }
         });
-
     }
     private void anhxa() {
         hoten = findViewById(R.id.edit1);
@@ -91,6 +90,7 @@ public class PhanUngSauTiemActivity extends AppCompatActivity {
                     CN = dataSnapshot.getValue(CaNhan.class);
                     hoten.setText(CN.getHoTen());
                 }
+
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
