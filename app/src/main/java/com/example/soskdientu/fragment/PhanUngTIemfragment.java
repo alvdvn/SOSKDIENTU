@@ -83,11 +83,16 @@ public class PhanUngTIemfragment extends Fragment {
                 Dialog dialog = builder1.create();
                 dialog.show();
                 hoten3 = view1.findViewById(R.id.put_hoten3);
+                hoten3.setText(hoTen);
                 tenVacxin3 = view1.findViewById(R.id.put_tenvacxin3);
+                tenVacxin3.setText(PUST.getTenVacxin());
                 ngayTiem3 = view1.findViewById(R.id.put_ngaytiem3);
+                ngayTiem3.setText(PUST.getNgayTiem());
                 thoiGian3 = view1.findViewById(R.id.put_thoigian3);
+                thoiGian3.setText(PUST.getThoiGian());
                 noiDung3 = view1.findViewById(R.id.put_noidung3);
-                btn3=view.findViewById(R.id.btnLuu3);
+                noiDung3.setText(PUST.getNoidDung());
+                btn3=view1.findViewById(R.id.btnLuu3);
                 btn3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -98,10 +103,11 @@ public class PhanUngTIemfragment extends Fragment {
                                 ,ngayTiem3.getText().toString()
                                 ,thoiGian3.getText().toString()
                                 ,noiDung3.getText().toString());
-                        myreb.child("PhanUngSauTiem").setValue(PU, new DatabaseReference.CompletionListener() {
+                        myreb.child("PhanUngSauTiem").child("PhanUngNguoiDung").setValue(PU, new DatabaseReference.CompletionListener() {
                             @Override
                             public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                                 Toast.makeText(getContext(), "update thành công", Toast.LENGTH_SHORT).show();
+                               dialog.dismiss();
 
 
                             }

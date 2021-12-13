@@ -21,10 +21,14 @@ import com.example.soskdientu.activity.HoSoSucKhoe.Hososuckhoe;
 import com.example.soskdientu.activity.MaSoSucKhoe.MaSoSKActivity;
 import com.example.soskdientu.activity.TiemChung.DangKyTiemChungActivity;
 import com.example.soskdientu.activity.TiemChung.MainActivity1;
+import com.example.soskdientu.activity.TiemChung.PhieuDongYActivity;
+import com.example.soskdientu.activity.TiemChung.TiemSuTiemActivity;
+import com.example.soskdientu.activity.camnangyte.CamnangyteActivity;
 import com.example.soskdientu.activity.khaibaoyte.man1;
 import com.example.soskdientu.activity.HomeActivity;
 import com.example.soskdientu.activity.TiemChung.PhanUngSauTiemActivity;
 import com.example.soskdientu.model.CaNhan;
+import com.example.soskdientu.model.DangKyTiemChung;
 import com.example.soskdientu.model.HsSucKhoe;
 import com.example.soskdientu.model.PhanUngSauTiem;
 import com.google.firebase.database.DataSnapshot;
@@ -38,7 +42,7 @@ import java.util.List;
 
 
 public class HomeFragment extends Fragment {
-    ImageView Khaibao,Hososk,datlich;
+    ImageView Khaibao,Hososk,datlich,mxnhan,camNang;
     TextView hoten;
     View view;
     String sdt;
@@ -48,6 +52,7 @@ public class HomeFragment extends Fragment {
     List<HsSucKhoe> hsSucKhoeList;
     HomeActivity homeActivity;
     PhanUngSauTiem phanung1;
+    DangKyTiemChung DKTC;
     public HomeFragment() {
     }
 
@@ -88,6 +93,7 @@ public class HomeFragment extends Fragment {
 
                             for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                                 phanung1 = dataSnapshot.getValue(PhanUngSauTiem.class);
+
 
 
                             }
@@ -186,6 +192,52 @@ public class HomeFragment extends Fragment {
                     startActivity(intent);
                 }
             });
+        mxnhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DKTC = new DangKyTiemChung();
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myreb = database.getReference("user/" + sdt + "/DangKyTiemChung");
+                myreb.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                            DKTC = dataSnapshot.getValue(DangKyTiemChung.class);
+
+
+
+                        }
+                        if(DKTC.getChk1()==null){
+                           Toast.makeText(getContext(),"Ban chua dang ky tiem",Toast.LENGTH_SHORT).show();
+
+                        }else {
+                            Intent intent = new Intent(getActivity(), PhieuDongYActivity.class);
+                            intent.putExtra("sdt", sdt);
+                            startActivity(intent);
+                        }
+
+
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Toast.makeText(getContext(), "ko thể kết nối sv", Toast.LENGTH_SHORT).show();
+                    }
+
+                });
+
+            }
+        });
+        camNang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), CamnangyteActivity.class);
+                intent.putExtra("sdt",sdt);
+                startActivity(intent);
+            }
+        });
 
         return view;
 
@@ -201,6 +253,8 @@ public class HomeFragment extends Fragment {
         Khaibao = view.findViewById(R.id.khaibao);
         btnmasosk = view.findViewById(R.id.masosk);
         btndktiemchung = view.findViewById(R.id.dktiemChung);
+        mxnhan = view.findViewById(R.id.maxacnhan);
+        camNang = view.findViewById(R.id.camnang);
         caNhan = new CaNhan();
     }
 

@@ -9,15 +9,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Man hinh chi tiet dang ky tiem chung"
+        android:text="Man hinh sua dang ky tiem chung"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="19dp"
         android:textAlignment="center"
 
         />
-    <TextView
-        android:id="@+id/dk_hoTen"
+    <EditText
+        android:id="@+id/dk_hoTen1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ho Ten: "
@@ -25,8 +25,8 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginTop="30dp"/>
-    <TextView
-        android:id="@+id/dk_ngaySinh"
+    <EditText
+        android:id="@+id/dk_ngaySinh1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ngay Sinh: "
@@ -34,8 +34,8 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginTop="10dp"/>
-    <TextView
-        android:id="@+id/dk_gioiTinh"
+    <EditText
+        android:id="@+id/dk_gioiTinh1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Gioi Tinh: "
@@ -43,8 +43,8 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginTop="10dp"/>
-    <TextView
-        android:id="@+id/dk_soCMND"
+    <EditText
+        android:id="@+id/dk_soCMND1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="So CMND: "
@@ -52,8 +52,8 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginTop="10dp"/>
-    <TextView
-        android:id="@+id/dk_soBHYT"
+    <EditText
+        android:id="@+id/dk_soBHYT1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="so BHYT: "
@@ -61,8 +61,8 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginTop="10dp"/>
-    <TextView
-        android:id="@+id/dk_diaChi"
+    <EditText
+        android:id="@+id/dk_diaChi1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Dia Chi: "
@@ -73,9 +73,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Xac nhan"
-        android:id="@+id/madk"/>
+        android:id="@+id/dk_update"
+        android:text="update"
+        android:layout_marginLeft="250dp"/>
 
 
 
-    </LinearLayout>
+
+</LinearLayout>

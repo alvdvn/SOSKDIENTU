@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.soskdientu.R;
 import com.example.soskdientu.activity.CaNhanActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.Hososuckhoe;
+import com.example.soskdientu.model.DangKyTiemChung;
 import com.example.soskdientu.model.HsSucKhoe;
 import com.example.soskdientu.model.Nguoidung;
 import com.example.soskdientu.model.PhanUngSauTiem;
@@ -113,6 +114,13 @@ public class SigninActivity extends AppCompatActivity {
                 });
                 HsSucKhoe hssk = new HsSucKhoe();
                 myreb.child(user.getUsername()).child("HoSoSuckhoe").child("hoso").setValue(hssk, new DatabaseReference.CompletionListener() {
+                    @Override
+                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+
+                    }
+                });
+                DangKyTiemChung DKTC = new DangKyTiemChung();
+                myreb.child(user.getUsername()).child("DangKyTiemChung").child("DangKy").setValue(DKTC, new DatabaseReference.CompletionListener() {
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
 

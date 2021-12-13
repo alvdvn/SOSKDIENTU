@@ -102,6 +102,12 @@
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <CheckBox
+        android:id="@+id/dk_chk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toi xac nhan dang ky"
+        android:layout_marginLeft="200dp"/>
 
     <Button
         android:id="@+id/btnTST"
@@ -109,6 +115,6 @@
         android:layout_height="wrap_content"
         android:text="Tiếp theo"
         android:layout_marginLeft="250dp"
-        android:onClick="setOnclickTiepTheo"/>
+        />
 
 </LinearLayout>

@@ -1,24 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity.TiemChung.PhieuDongYActivity"
-    android:orientation="vertical">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:src="@drawable/img"/>
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:text="Tôi đồng ý với các điều khoản trên"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:text="Xác nhận"/>
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:orientation="vertical"
 
+android:background="@drawable/background_layout"
+android:layout_height="match_parent"
+tools:context=".activity.TiemChung.PhieuDongYActivity">
+<TextView
+    android:layout_marginTop="30dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="14pt"
+    android:textStyle="bold"
+    android:textColor="@color/black"
+    android:text="Ma Dang Ky"
+    android:layout_gravity="center"
+    />
+
+<LinearLayout
+    android:layout_marginTop="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bogoclayout">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/img_qrcode"/>
+
+</LinearLayout>
 </LinearLayout>
