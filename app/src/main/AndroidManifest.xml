@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SOSKDIENTU">
         <activity
+            android:name=".activity.tracuubaohiem.TracuubaohiemActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.MaSoSucKhoe.MaSoSKActivity"
             android:exported="false" />
         <activity
@@ -48,9 +51,7 @@
             android:exported="false" />
         <activity
             android:name=".activity.TiemChung.PhanUngSauTiemActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".activity.khaibaoyte.man3"
             android:exported="false" />
@@ -62,10 +63,10 @@
             android:exported="false" />
         <activity
             android:name=".activity.HoSoSucKhoe.Hososuckhoe"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activity.HoSoSucKhoe.HSSKhienthiActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activity.Dangnhap_Dawngky.SigninActivity"
             android:exported="false" />
@@ -77,7 +78,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".activity.HomeActivity"
@@ -96,9 +96,7 @@
             android:exported="false" />
         <activity
             android:name=".activity.TiemChung.MainActivity1"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

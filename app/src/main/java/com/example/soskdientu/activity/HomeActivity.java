@@ -9,15 +9,11 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.soskdientu.R;
-import com.example.soskdientu.activity.thongbao.ThongbaoActivity;
 import com.example.soskdientu.adapter.ViewpagerAdapter;
 import com.example.soskdientu.fragment.DatLichFragment;
 import com.example.soskdientu.fragment.HoSoCaNhanFragment;
 import com.example.soskdientu.fragment.HomeFragment;
-import com.example.soskdientu.fragment.ThongbaoFragment;
 import com.google.android.material.tabs.TabLayout;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class HomeActivity extends AppCompatActivity {
     private TabLayout tabLayout;
