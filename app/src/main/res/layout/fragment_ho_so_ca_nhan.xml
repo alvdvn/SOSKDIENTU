@@ -3,22 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@drawable/background_layout"
     android:orientation="vertical"
     tools:context=".fragment.HoSoCaNhanFragment">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#58DFB4"
+
         android:gravity="center"
         android:text="Hồ Sơ Cá Nhân "
         android:textColor="#F9FAFB"
-        android:textSize="20dp"
+        android:textSize="30dp"
         android:layout_marginTop="15dp"
         android:textStyle="bold" />
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="666dp"
+    android:orientation="vertical"
+    android:background="@drawable/bogoclayout"
+    android:layout_marginTop="30dp"
+>
     <TextView
         android:id="@+id/tv_hoten1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
         android:text="Họ tên:"
         android:layout_below="@+id/tv_maTV"
         android:textColor="#050505"
@@ -30,16 +38,18 @@
     <TextView
         android:id="@+id/tv_namsinh1"
         android:text="Ngày tháng năm sinh:"
+        android:layout_marginLeft="20dp"
         android:layout_below="@+id/tv_hotenTV"
         android:textColor="#2196F3"
         android:textStyle="bold"
         android:padding="3dp"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/tv_diachi1"
         android:text="Địa chỉ:"
+        android:layout_marginLeft="20dp"
         android:layout_below="@+id/tv_namsinh"
         android:textColor="#009688"
         android:textStyle="bold"
@@ -53,6 +63,7 @@
         android:layout_below="@+id/tv_diachi"
         android:textColor="#FFEB3B"
         android:textStyle="bold"
+        android:layout_marginLeft="20dp"
         android:padding="3dp"
         android:textSize="20sp"
         android:layout_width="wrap_content"
@@ -62,6 +73,7 @@
         android:text="SĐT:"
         android:layout_below="@+id/tv_gioitinh"
         android:textColor="#673AB7"
+        android:layout_marginLeft="20dp"
         android:textStyle="bold"
         android:padding="3dp"
         android:textSize="20sp"
@@ -73,6 +85,7 @@
         android:layout_below="@+id/tv_sodienthoai"
         android:textColor="#FF5722"
         android:textStyle="bold"
+        android:layout_marginLeft="20dp"
         android:padding="3dp"
         android:textSize="20sp"
         android:layout_width="wrap_content"
@@ -82,6 +95,7 @@
         android:text="Bảo Hiểm Y tê:"
         android:layout_below="@+id/tv_socancuoc"
         android:textColor="#8BC34A"
+        android:layout_marginLeft="20dp"
         android:textStyle="bold"
         android:padding="3dp"
         android:textSize="20sp"
@@ -95,6 +109,7 @@
         android:textStyle="bold"
         android:padding="3dp"
         android:textSize="20sp"
+        android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
@@ -102,6 +117,7 @@
         android:text="Thời hạn đến ngày:"
         android:textColor="#9C27B0"
         android:textStyle="bold"
+        android:layout_marginLeft="20dp"
         android:padding="3dp"
         android:textSize="20sp"
         android:layout_width="wrap_content"
@@ -112,6 +128,7 @@
         android:text="Quốc tịch:"
         android:textColor="#E91E63"
         android:textStyle="bold"
+        android:layout_marginLeft="20dp"
         android:padding="3dp"
         android:textSize="20sp"
         android:layout_below="@+id/tv_thoihanden"
@@ -123,19 +140,22 @@
         android:textColor="#3F51B5"
         android:textStyle="bold"
         android:padding="3dp"
+        android:layout_marginLeft="20dp"
         android:textSize="20sp"
         android:layout_below="@+id/tv_quoctich"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-<Button
-    android:layout_width="140dp"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:layout_marginLeft="130dp"
-    android:backgroundTint="#58DFB4"
-    android:drawableLeft="@drawable/ic_baseline_save_24"
-    android:text="update"
-    android:id="@+id/btnupdate"/>
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="130dp"
+        android:backgroundTint="#E48EED"
+        android:drawableLeft="@drawable/ic_baseline_save_24"
+        android:text="update"
+        android:id="@+id/btnupdate"/>
+</LinearLayout>
+
 
 <!--    <ImageView-->
 <!--        android:id="@+id/img_delete_thanhvien"-->
