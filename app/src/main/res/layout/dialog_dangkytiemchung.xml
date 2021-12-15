@@ -5,79 +5,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.TiemChung.TiemSuTiemActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background_layout">
     <TextView
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Man hinh sua dang ky tiem chung"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:textSize="19dp"
-        android:textAlignment="center"
+        android:textSize="14pt"
+        android:textAlignment="center"/>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:background="@drawable/bogoclayout">
+        <EditText
+            android:id="@+id/dk_hoTen1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Họ tên"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"/>
+        <EditText
+            android:id="@+id/dk_ngaySinh1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ngày sinh"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/dk_gioiTinh1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Giới tinh"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/dk_soCMND1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Số CMND"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/dk_soBHYT1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Số BHYT"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:id="@+id/dk_diaChi1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Địa Chỉ"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
 
-        />
-    <EditText
-        android:id="@+id/dk_hoTen1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ho Ten: "
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="30dp"/>
-    <EditText
-        android:id="@+id/dk_ngaySinh1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ngay Sinh: "
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
-    <EditText
-        android:id="@+id/dk_gioiTinh1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Gioi Tinh: "
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
-    <EditText
-        android:id="@+id/dk_soCMND1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="So CMND: "
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
-    <EditText
-        android:id="@+id/dk_soBHYT1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="so BHYT: "
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
-    <EditText
-        android:id="@+id/dk_diaChi1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dia Chi: "
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dk_update"
-        android:text="update"
-        android:layout_marginLeft="250dp"/>
-
-
-
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/dk_update"
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:background="@drawable/bogocbutton"
+            android:text="update" />
+    </LinearLayout>
 
 </LinearLayout>

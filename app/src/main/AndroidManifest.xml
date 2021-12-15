@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.soskdientu">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,6 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SOSKDIENTU">
+        <activity
+            android:name=".activity.TiemChung.ChungNhanActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.tracuubaohiem.TracuubaohiemActivity"
             android:exported="false" />
@@ -51,7 +56,7 @@
             android:exported="false" />
         <activity
             android:name=".activity.TiemChung.PhanUngSauTiemActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activity.khaibaoyte.man3"
             android:exported="false" />
@@ -96,7 +101,7 @@
             android:exported="false" />
         <activity
             android:name=".activity.TiemChung.MainActivity1"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

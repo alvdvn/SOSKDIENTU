@@ -5,76 +5,92 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.TiemChung.TiemSuTiemActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background_layout">
     <TextView
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Man hinh chi tiet dang ky tiem chung"
+        android:text="Thông tin chi tiết đăng ký"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:textSize="19dp"
+        android:textSize="14pt"
         android:textAlignment="center"
 
         />
-    <TextView
-        android:id="@+id/dk_hoTen"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ho Ten: "
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="30dp"/>
-    <TextView
-        android:id="@+id/dk_ngaySinh"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ngay Sinh: "
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
-    <TextView
-        android:id="@+id/dk_gioiTinh"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Gioi Tinh: "
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
-    <TextView
-        android:id="@+id/dk_soCMND"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="So CMND: "
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
-    <TextView
-        android:id="@+id/dk_soBHYT"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="so BHYT: "
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
-    <TextView
-        android:id="@+id/dk_diaChi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dia Chi: "
-        android:textSize="16dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Xac nhan"
-        android:id="@+id/madk"/>
+        android:layout_height="666dp"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bogoclayout">
+        <TextView
+
+            android:id="@+id/dk_hoTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Họ tên: "
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"/>
+        <TextView
+            android:id="@+id/dk_ngaySinh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ngày sinh: "
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/dk_gioiTinh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Giới tính: "
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/dk_soCMND"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Số CMND: "
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/dk_soBHYT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Số BHYT: "
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/dk_diaChi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Địa chỉ: "
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/madk"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bogocbutton"
+            android:text="Xac nhan" />
+    </LinearLayout>
+
+
 
 
 

@@ -15,7 +15,7 @@ tools:context=".activity.TiemChung.PhieuDongYActivity">
     android:textSize="14pt"
     android:textStyle="bold"
     android:textColor="@color/black"
-    android:text="Ma Dang Ky"
+    android:text="Mã Đăng Ký"
     android:layout_gravity="center"
     />
 

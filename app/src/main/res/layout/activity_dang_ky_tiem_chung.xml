@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.TiemChung.DangKyTiemChungActivity">
+    tools:context=".activity.TiemChung.DangKyTiemChungActivity"
+    android:background="@drawable/background_layout">
     <TextView
+        android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Dang ky tiem chung"
+        android:text="Đăng ký tiêm chủng"
         android:textColor="@color/black"
         android:textSize="14pt"
         android:textStyle="bold"
@@ -18,103 +20,117 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="666dp"
+        android:orientation="vertical"
+        android:background="@drawable/bogoclayout">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/hoten"
-        android:hint="Ho ten"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
 
-        />
-    <EditText
-        android:id="@+id/edit1"
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/ngaysinh"
-        android:hint="Ngay sinh"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp" />
-    <EditText
-        android:id="@+id/edit2"
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="datetime"/>
+        <TextView
 
-    <TextView
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="Gioi tinh"
-        android:textColor="@color/black"
-        android:textSize="15dp" />
-    <EditText
-        android:id="@+id/edit3"
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="datetime"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/So_CMND"
-        android:hint="So CMND"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp" />
-    <EditText
-        android:id="@+id/edit4"
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hoten"
+            android:hint="Họ tên"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/BHYT"
-        android:hint="So the BHYT (neu co)"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp" />
-    <EditText
-        android:id="@+id/edit5"
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"/>
+            />
+        <EditText
+            android:id="@+id/edit1"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/DiaChi"
-        android:hint="Dia chi lien he"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp" />
-    <EditText
-        android:id="@+id/edit6"
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <CheckBox
-        android:id="@+id/dk_chk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Toi xac nhan dang ky"
-        android:layout_marginLeft="200dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ngaysinh"
+            android:hint="Ngày sinh"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+        <EditText
+            android:id="@+id/edit2"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"/>
 
-    <Button
-        android:id="@+id/btnTST"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tiếp theo"
-        android:layout_marginLeft="250dp"
-        />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Giới tính"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+        <EditText
+            android:id="@+id/edit3"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/So_CMND"
+            android:hint="Số CMND"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+        <EditText
+            android:id="@+id/edit4"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/BHYT"
+            android:hint="Số thẻ BHYT (nếu có)"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+        <EditText
+            android:id="@+id/edit5"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/DiaChi"
+            android:hint="Địa chỉ liên hệ"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+        <EditText
+            android:id="@+id/edit6"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:id="@+id/dk_chk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tôi xác nhận đăng ký"
+            android:layout_marginLeft="200dp"/>
+
+        <Button
+            android:id="@+id/btnTST"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bogocbutton"
+            android:text="Tiếp theo" />
+
+
+    </LinearLayout>
+
 
 </LinearLayout>

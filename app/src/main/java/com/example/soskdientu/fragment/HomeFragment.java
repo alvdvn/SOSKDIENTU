@@ -19,6 +19,7 @@ import com.example.soskdientu.activity.DatLichKham.SearchActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.HSSKhienthiActivity;
 import com.example.soskdientu.activity.HoSoSucKhoe.Hososuckhoe;
 import com.example.soskdientu.activity.MaSoSucKhoe.MaSoSKActivity;
+import com.example.soskdientu.activity.TiemChung.ChungNhanActivity;
 import com.example.soskdientu.activity.TiemChung.DangKyTiemChungActivity;
 import com.example.soskdientu.activity.TiemChung.MainActivity1;
 import com.example.soskdientu.activity.TiemChung.PhieuDongYActivity;
@@ -43,7 +44,7 @@ import java.util.List;
 
 
 public class HomeFragment extends Fragment {
-    ImageView Khaibao,Hososk,datlich,mxnhan,camNang;
+    ImageView Khaibao,Hososk,datlich,mxnhan,camNang,chungnhan;
     TextView hoten;
     View view;
     String sdt;
@@ -247,6 +248,14 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        chungnhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ChungNhanActivity.class);
+                intent.putExtra("sdt",sdt);
+                startActivity(intent);
+            }
+        });
 
         return view;
 
@@ -265,6 +274,7 @@ public class HomeFragment extends Fragment {
         btntracuubh=view.findViewById(R.id.bhyt);
         mxnhan = view.findViewById(R.id.maxacnhan);
         camNang = view.findViewById(R.id.camnang);
+        chungnhan = view.findViewById(R.id.cncovid);
         caNhan = new CaNhan();
     }
 

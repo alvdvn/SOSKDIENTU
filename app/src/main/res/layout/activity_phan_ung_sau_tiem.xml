@@ -5,84 +5,104 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.TiemChung.PhanUngSauTiemActivity"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    android:background="@drawable/background_layout">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/hoten"
-        android:hint="Ho ten"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp" />
-    <EditText
-        android:id="@+id/edit1"
-        android:layout_marginLeft="10dp"
+        android:text="Phản ứng sau tiêm"
+        android:textSize="14pt"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="666dp"
+        android:orientation="vertical"
+        android:background="@drawable/bogoclayout"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hoten"
+            android:hint="Họ tên"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp" />
+        <EditText
+            android:id="@+id/edit1"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/TenVacXin"
-        android:hint="Ten Vacxin"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp" />
-    <EditText
-        android:id="@+id/put_tenvacxin"
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TenVacXin"
+            android:hint="Tên vaccine"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+        <EditText
+            android:id="@+id/put_tenvacxin"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/ngayTiem"
-        android:hint="Ngay Tiem"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp" />
-    <EditText
-        android:id="@+id/put_ngayTiem"
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="datetime"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ngayTiem"
+            android:hint="Ngày tiêm"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+        <EditText
+            android:id="@+id/put_ngayTiem"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Thoigian"
-        android:hint="Thoi gian xay ra phan ung"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp" />
-    <EditText
-        android:id="@+id/put_thoigian"
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="datetime"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Thoigian"
+            android:hint="Thời gian xảy ra phản ứng"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+        <EditText
+            android:id="@+id/put_thoigian"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"/>
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/NoiDung"
-        android:hint="Noi dung phan ung"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp" />
-    <EditText
-        android:id="@+id/put_noidung"
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:lines="3"
-        android:maxLines="7"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/NoiDung"
+            android:hint="Nội dung phản ứng"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+        <EditText
+            android:id="@+id/put_noidung"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="3"
+            android:maxLines="7"/>
 
-    <Button
-        android:id="@+id/btn_put"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:text="Xac nhan thong tin"/>
+        <Button
+            android:id="@+id/btn_put"
+            android:layout_width="224dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bogocbutton"
+            android:text="Xác nhận thông tin" />
+    </LinearLayout>
+
+
 
 
 

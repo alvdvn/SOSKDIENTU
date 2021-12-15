@@ -102,14 +102,17 @@
             android:text="Sửa nội dung"
             android:layout_marginLeft="200dp"
             android:layout_marginTop="40dp"
-            android:id="@+id/btn_sua" />
+            android:id="@+id/btn_sua"
+            android:background="@drawable/bogocbutton"/>
+
         <Button
+            android:id="@+id/btn_xoa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Xoa noi dung"
             android:layout_marginLeft="200dp"
             android:layout_marginTop="20dp"
-            android:id="@+id/btn_xoa" />
+            android:background="@drawable/bogocbutton"
+            android:text="Xóa nội dung" />
 
 
     </LinearLayout>
