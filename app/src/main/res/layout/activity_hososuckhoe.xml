@@ -4,8 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_layout"
     tools:context=".activity.HoSoSucKhoe.Hososuckhoe">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
+        android:gravity="center"
+        android:text="Hồ Sơ Sức Khỏe "
+        android:textColor="#080909"
+        android:textSize="30dp"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold" />
     <ScrollView
         android:layout_width="409dp"
         android:layout_height="657dp"
@@ -14,18 +25,20 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#58DFB4"
-                android:gravity="center"
-                android:text="Hồ Sơ Sức Khỏe "
-                android:textColor="#F9FAFB"
-                android:textSize="20dp"
-                android:layout_marginTop="15dp"
-                android:textStyle="bold" />
+            android:orientation="vertical"
+            android:background="@drawable/bogoclayout">
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="#58DFB4"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Hồ Sơ Sức Khỏe "-->
+<!--                android:textColor="#F9FAFB"-->
+<!--                android:textSize="20dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:textStyle="bold" />-->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -124,18 +137,18 @@
                     android:id="@+id/btnLuu2"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="55dp"
-                    android:backgroundTint="#58DFB4"
+                    android:layout_marginLeft="160dp"
+                    android:backgroundTint="#DC85DA"
                     android:drawableLeft="@drawable/ic_baseline_save_24"
                     android:text="Lưu" />
-                <Button
-                    android:id="@+id/btn_edit_huy_thanhvien"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:backgroundTint="#58DFB4"
-                    android:drawableLeft="@drawable/ic_baseline_cancel_24"
-                    android:text="Hủy" />
+<!--                <Button-->
+<!--                    android:id="@+id/btn_edit_huy_thanhvien"-->
+<!--                    android:layout_width="120dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="50dp"-->
+<!--                    android:backgroundTint="#58DFB4"-->
+<!--                    android:drawableLeft="@drawable/ic_baseline_cancel_24"-->
+<!--                    android:text="Hủy" />-->
 
             </LinearLayout>
 

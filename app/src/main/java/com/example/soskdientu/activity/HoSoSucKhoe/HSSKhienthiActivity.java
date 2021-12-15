@@ -159,7 +159,7 @@ public class HSSKhienthiActivity extends AppCompatActivity {
         nm.setText("Nhóm máu: "+hsSucKhoe.getNhomMau());
     }
     private void settext1(){
-        sdt4.setText(sdt);
+        sdt4.setText("Số điện thoai: "+sdt);
         ht.setText("Họ tên: "+caNhan.getHoTen());
         gt.setText("Giới Tính: "+caNhan.getHoTen());
         ns.setText("Ngày sinh: " +caNhan.getNamSinh());
