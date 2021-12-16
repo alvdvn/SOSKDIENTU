@@ -104,11 +104,11 @@ public class man2 extends AppCompatActivity {
         });
     }
     private void settext(){
-        HT1.setText(caNhan.getHoTen());
-        NS1.setText(caNhan.getNamSinh());
-        CC1.setText(caNhan.getSoCanCuoc());
-        QT1.setText(caNhan.getQuocTich());
-        SDT1.setText(sdt);
-        NOHT.setText(caNhan.getDiaChi());
+        HT1.setText("Họ và tên: " + caNhan.getHoTen());
+        NS1.setText("Năm sinh: " + caNhan.getNamSinh());
+        CC1.setText("Số căn cước: " + caNhan.getSoCanCuoc());
+        QT1.setText("Quốc tịch: " + caNhan.getQuocTich());
+        SDT1.setText("Số điện thoại: "+sdt);
+        NOHT.setText("Địa chỉ: "+caNhan.getDiaChi());
     }
 }

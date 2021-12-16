@@ -64,12 +64,17 @@ public class SigninActivity extends AppCompatActivity {
                 rmk= repass.getText().toString();
 
 
+
                 try {
                 if(sodt.isEmpty() || mk.isEmpty() || rmk.isEmpty()){
                     Toast.makeText(getApplicationContext(), "Mời nhập đầy đủ thông tin trước khi đăng ký", Toast.LENGTH_SHORT).show();
                     clear();
                     return;
                 }
+                if(cbdk.isChecked()==false){
+                        Toast.makeText(getApplicationContext(),"Vui lòng đồng ý với điều khoản của chúng tôi",Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                 if(sdt.length()!=10){
                     Toast.makeText(getApplicationContext(), "Số điện thoại không hợp lệ , mời kiểm tra lại", Toast.LENGTH_SHORT).show();
                     clear();

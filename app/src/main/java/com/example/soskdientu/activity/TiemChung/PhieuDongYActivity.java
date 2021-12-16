@@ -3,6 +3,8 @@ package com.example.soskdientu.activity.TiemChung;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -10,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.soskdientu.R;
+import com.example.soskdientu.activity.HomeActivity;
 import com.example.soskdientu.model.CaNhan;
 import com.example.soskdientu.model.HsSucKhoe;
 import com.google.firebase.database.DataSnapshot;
@@ -28,6 +31,7 @@ public class PhieuDongYActivity extends AppCompatActivity {
     String sdt;
     String text;
     CaNhan caNhan;
+    Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +40,16 @@ public class PhieuDongYActivity extends AppCompatActivity {
         sdt = intent.getStringExtra("sdt");
         caNhan = new CaNhan();
         QRcode = findViewById(R.id.img_qrcode);
+        btn = findViewById(R.id.btnQV);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(PhieuDongYActivity.this, HomeActivity.class);
+                intent1.putExtra("sdt",sdt);
+                startActivity(intent1);
+
+            }
+        });
         try {
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myreb = database.getReference("user/" + sdt + "/HoSoCaNhan");

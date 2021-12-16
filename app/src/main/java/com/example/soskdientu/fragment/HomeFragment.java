@@ -137,6 +137,7 @@ public class HomeFragment extends Fragment {
             Hososk.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    hsSucKhoe = new HsSucKhoe();
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
                     DatabaseReference myreb = database.getReference("user/" + sdt + "/HoSoSuckhoe");
                     myreb.addValueEventListener(new ValueEventListener() {
@@ -154,6 +155,7 @@ public class HomeFragment extends Fragment {
                                 startActivity(intent);
                             }else {
                                 Intent intent = new Intent(getActivity(), HSSKhienthiActivity.class);
+
                                 intent.putExtra("sdt", sdt);
                                 startActivity(intent);
                             }
@@ -274,7 +276,7 @@ public class HomeFragment extends Fragment {
     private void anhxa(){
         tuvan = view.findViewById(R.id.tuvan);
         hsSucKhoeList = new ArrayList<>();
-        hsSucKhoe = new HsSucKhoe();
+
         hoten = view.findViewById(R.id.tv_hvt);
         datlich = view.findViewById(R.id.datlich);
         btnphanung =view.findViewById(R.id.phanung);

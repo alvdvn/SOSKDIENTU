@@ -77,6 +77,17 @@ public class HoSoCaNhanFragment extends Fragment {
                 tg3=view.findViewById(R.id.et_tongiao3);
                 btnupdate1=view.findViewById(R.id.btnLuu3);
 
+               ht3.setText("Họ và tên: "+caNhan.getHoTen());
+               dc3.setText("Địa chỉ: "+caNhan.getDiaChi());
+               ns3.setText(" Ngày sinh: " +caNhan.getNamSinh());
+               gt3.setText("Giới tính: "+caNhan.getGioiTinh());
+               scc3.setText("Số căn cước:"+caNhan.getSoCanCuoc());
+               sbhyt3.setText("Số BHYT: "+caNhan.getSoTheBaoHiemYTe());
+               tht3.setText(" Từ ngày: "+caNhan.getThoiHanSdTheTuNgay());
+               thd3.setText(" Đến ngày: "+caNhan.getThoiHanSdTheDenNgay());
+               qt3.setText("Quốc tịch: "+caNhan.getQuocTich());
+               tg3.setText("Tôn giáo: "+caNhan.getTonGiao());
+
               btnupdate1.setOnClickListener(new View.OnClickListener() {
                   @Override
                   public void onClick(View v) {

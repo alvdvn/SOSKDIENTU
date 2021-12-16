@@ -43,6 +43,12 @@ public class PhanUngSauTiemActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(tenVacxin.getText().toString().isEmpty()|| ngayTiem.getText().toString().isEmpty() || thoiGian.getText().toString().isEmpty() || noidDung.getText().toString().isEmpty()){
+                    Toast.makeText(getApplicationContext(),"Vui lòng nhập đầy đủ thông tin",Toast.LENGTH_SHORT).show();
+                    return;
+
+                }
+
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myreb = database.getReference("user/"+sdt1);
                 PhanUngSauTiem PhanUngSauTiem= new PhanUngSauTiem(

@@ -46,6 +46,7 @@ CaNhan caNhan;
         btnluu2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if(cc2.getText().toString().isEmpty()||cn2.getText().toString().isEmpty()||nt2.getText().toString().isEmpty()||
                 nm2.getText().toString().isEmpty()||nd2.getText().toString().isEmpty()||ha2.getText().toString().isEmpty()){
                     Toast.makeText(getApplicationContext(), "Mời nhập đầy đủ thông tin trước khi xác nhận", Toast.LENGTH_SHORT).show();

@@ -42,25 +42,25 @@ public class SearchActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycleview);
         title =findViewById(R.id.title1);
 
-        searchView = findViewById(R.id.searchview);
+//        searchView = findViewById(R.id.searchview);
         fillterlist = new ArrayList<>();
         list = new ArrayList<>();
         getlistbv();
 
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                filter(newText);
-                adapter1= new HospitalAdapter(SearchActivity.this,fillterlist,sdt);
-                recyclerView.setAdapter(adapter1);
-                return true;
-            }
-        });
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                filter(newText);
+//                adapter1= new HospitalAdapter(SearchActivity.this,fillterlist,sdt);
+//                recyclerView.setAdapter(adapter1);
+//                return true;
+//            }
+//        });
     }
 
     private void filter(String newText) {

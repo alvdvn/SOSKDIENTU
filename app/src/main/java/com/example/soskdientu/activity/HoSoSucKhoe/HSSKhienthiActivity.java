@@ -71,6 +71,14 @@ public class HSSKhienthiActivity extends AppCompatActivity {
                cn4=view.findViewById(R.id.et_cannang4);
                cc4=view.findViewById(R.id.et_chieucao4);
                btnupdate4=view.findViewById(R.id.btnLuu4);
+
+
+                nd4.setText("Nhiệt độ: "+hsSucKhoe.getChieuCao());
+                ha4.setText("Huyết áp: "+hsSucKhoe.getCanNang());
+                nt4.setText("Nhịp tim: "+hsSucKhoe.getNhipTim());
+                nm4.setText("Nhóm máu: "+hsSucKhoe.getNhomMau());
+                cn4.setText("Cân nặng: "+hsSucKhoe.getHuyetAp());
+                cc4.setText("Chiều Cao: "+hsSucKhoe.getNhietDo());
 //                sbhyt4=view.findViewById(R.id.et_sothebaohiemyte4);
                 btnupdate4.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -162,8 +170,6 @@ public class HSSKhienthiActivity extends AppCompatActivity {
 
     private void settext(){
         sdt4.setText("Số Điện thoại:"+sdt);
-
-
         nd.setText("Nhiệt độ: "+hsSucKhoe.getChieuCao());
         ha.setText("Huyết áp: "+hsSucKhoe.getCanNang());
         nt.setText("Nhịp tim: "+hsSucKhoe.getNhipTim());
