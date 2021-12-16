@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="800dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/bogocbtn"
+            android:background="#F7F7F8"
 
             android:orientation="vertical">
 <!--                        <TextView-->
@@ -36,51 +36,51 @@
 <!--                            android:textColor="#F9FAFB"-->
 <!--                            android:textSize="20dp"-->
 <!--                            android:textStyle="bold" />-->
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:hint="Số Điện Thoại:"
-                android:id="@+id/et_sodienthoai5"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Họ và tên:"
-                android:layout_marginTop="20dp"
-                android:id="@+id/et_hovaten4"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Ngày tháng năng sinh:"
-                android:layout_marginTop="20dp"
-                android:id="@+id/et_namsinh4"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Giới tính :"
-                android:layout_marginTop="20dp"
-                android:id="@+id/et_gioitinh4"
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:hint="Số Điện Thoại:"-->
+<!--                android:id="@+id/et_sodienthoai5"-->
+<!--                />-->
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Họ và tên:"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:id="@+id/et_hovaten4"-->
+<!--                />-->
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Ngày tháng năng sinh:"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:id="@+id/et_namsinh4"-->
+<!--                />-->
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Giới tính :"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:id="@+id/et_gioitinh4"-->
 
-                />
+<!--                />-->
 
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:hint="Số Căn Cước:"
-                android:id="@+id/et_socancuoc4"
-                />
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:hint="SỐ thẻ bảo hiểm Y tế:"
-                android:id="@+id/et_sothebaohiemyte4"
-                />
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:hint="Số Căn Cước:"-->
+<!--                android:id="@+id/et_socancuoc4"-->
+<!--                />-->
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:hint="SỐ thẻ bảo hiểm Y tế:"-->
+<!--                android:id="@+id/et_sothebaohiemyte4"-->
+<!--                />-->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

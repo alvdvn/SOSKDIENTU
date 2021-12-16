@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.example.soskdientu.R;
 import com.example.soskdientu.activity.CaNhanActivity;
 import com.example.soskdientu.activity.HomeActivity;
-import com.example.soskdientu.fragment.HsSucKhoeFragment;
+//import com.example.soskdientu.fragment.HsSucKhoeFragment;
 import com.example.soskdientu.model.CaNhan;
 import com.example.soskdientu.model.HsSucKhoe;
 import com.example.soskdientu.model.Nguoidung;

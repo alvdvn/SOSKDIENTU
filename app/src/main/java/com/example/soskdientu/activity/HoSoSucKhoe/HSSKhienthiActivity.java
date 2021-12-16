@@ -16,6 +16,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.soskdientu.R;
+import com.example.soskdientu.activity.HomeActivity;
+import com.example.soskdientu.activity.khaibaoyte.man1;
+import com.example.soskdientu.activity.khaibaoyte.man2;
 import com.example.soskdientu.model.CaNhan;
 import com.example.soskdientu.model.HsSucKhoe;
 import com.google.firebase.database.DataSnapshot;
@@ -28,7 +31,7 @@ public class HSSKhienthiActivity extends AppCompatActivity {
     TextView ht,gt,ns,scc,sbhyt,sdt4,nd,ha,nt,nm,cc,cn;
     EditText ht4,gt4,ns4,sdt14,scc4,sbhyt4,nt4,nm4,cc4,cn4,nd4,ha4;
     String sdt ;
-   Button btnupdate5, btnupdate4;
+   Button btnupdate5, btnupdate4,btntrangchu;
     CaNhan caNhan;
     HsSucKhoe hsSucKhoe;
     @Override
@@ -40,6 +43,14 @@ public class HSSKhienthiActivity extends AppCompatActivity {
         sdt=intent.getStringExtra("sdt");
         getlistuser(sdt);
         getlistuser1(sdt);
+        btntrangchu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HSSKhienthiActivity.this, HomeActivity.class);
+                intent.putExtra("sdt",sdt);
+                startActivity(intent);
+            }
+        });
         btnupdate5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,11 +59,11 @@ public class HSSKhienthiActivity extends AppCompatActivity {
                 builder.setView(view);
                 Dialog dialog = builder.create();
                 dialog.show();
-                ht4=view.findViewById(R.id.et_hovaten4);
-                gt4=view.findViewById(R.id.et_gioitinh4);
-                ns4=view.findViewById(R.id.et_namsinh4);
-                sdt14=view.findViewById(R.id.et_sodienthoai5);
-                scc4=view.findViewById(R.id.et_socancuoc4);
+//                ht4=view.findViewById(R.id.et_hovaten4);
+//                gt4=view.findViewById(R.id.et_gioitinh4);
+//                ns4=view.findViewById(R.id.et_namsinh4);
+//                sdt14=view.findViewById(R.id.et_sodienthoai5);
+//                scc4=view.findViewById(R.id.et_socancuoc4);
                nd4=view.findViewById(R.id.et_nhietdo4);
                ha4=view.findViewById(R.id.et_huyetao4);
                nt4=view.findViewById(R.id.et_nhiptim4);
@@ -60,7 +71,7 @@ public class HSSKhienthiActivity extends AppCompatActivity {
                cn4=view.findViewById(R.id.et_cannang4);
                cc4=view.findViewById(R.id.et_chieucao4);
                btnupdate4=view.findViewById(R.id.btnLuu4);
-                sbhyt4=view.findViewById(R.id.et_sothebaohiemyte4);
+//                sbhyt4=view.findViewById(R.id.et_sothebaohiemyte4);
                 btnupdate4.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -96,7 +107,7 @@ public class HSSKhienthiActivity extends AppCompatActivity {
         nd=findViewById(R.id.tv_nhietdo2);
         ha=findViewById(R.id.tv_huyetap2);
         btnupdate5=findViewById(R.id.btnupdate5);
-
+        btntrangchu=findViewById(R.id.btntrangchu);
         nt=findViewById(R.id.tv_nhiptim2);
         nm=findViewById(R.id.tv_nhommau2);
         cc=findViewById(R.id.tv_chieucao2);
@@ -151,17 +162,20 @@ public class HSSKhienthiActivity extends AppCompatActivity {
 
     private void settext(){
         sdt4.setText("Số Điện thoại:"+sdt);
-        cc.setText("Chiều Cao: "+hsSucKhoe.getChieuCao());
-        cn.setText("Cân nặng: "+hsSucKhoe.getCanNang());
-        nd.setText("Nhiệt độ: "+hsSucKhoe.getNhietDo());
-        ha.setText("Huyết áp: "+hsSucKhoe.getHuyetAp());
+
+
+        nd.setText("Nhiệt độ: "+hsSucKhoe.getChieuCao());
+        ha.setText("Huyết áp: "+hsSucKhoe.getCanNang());
         nt.setText("Nhịp tim: "+hsSucKhoe.getNhipTim());
         nm.setText("Nhóm máu: "+hsSucKhoe.getNhomMau());
+        cn.setText("Cân nặng: "+hsSucKhoe.getHuyetAp());
+        cc.setText("Chiều Cao: "+hsSucKhoe.getNhietDo());
+
     }
     private void settext1(){
         sdt4.setText("Số điện thoai: "+sdt);
         ht.setText("Họ tên: "+caNhan.getHoTen());
-        gt.setText("Giới Tính: "+caNhan.getHoTen());
+        gt.setText("Giới Tính: "+caNhan.getGioiTinh());
         ns.setText("Ngày sinh: " +caNhan.getNamSinh());
         scc.setText("Số Căn Cước: "+caNhan.getSoCanCuoc());
         sbhyt.setText("Số BHYT: "+caNhan.getSoTheBaoHiemYTe());

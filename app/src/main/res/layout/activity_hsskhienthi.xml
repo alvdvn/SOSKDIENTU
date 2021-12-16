@@ -159,14 +159,25 @@
             android:layout_below="@+id/tv_chieucao2"
             android:layout_height="wrap_content"/>
         <Button
-            android:layout_width="130dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginLeft="130dp"
+            android:layout_marginTop="20dp"
+           android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
             android:backgroundTint="#58DFB4"
             android:drawableLeft="@drawable/ic_baseline_save_24"
             android:text="Update "
             android:id="@+id/btnupdate5"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+android:text="Trang Chủ"
+            android:backgroundTint="#58DFB4"
+          android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/btntrangchu"/>
 
     </LinearLayout>
 
