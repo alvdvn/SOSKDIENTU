@@ -39,8 +39,16 @@
         <entry key="..\:/Users/Admin/Documents/GitHub/SOSKDIENTU/app/src/main/res/drawable/bogocimgbtn.xml" value="0.20092592592592592" />
         <entry key="..\:/Users/Admin/Documents/GitHub/SOSKDIENTU/app/src/main/res/drawable/edt_style.xml" value="0.20092592592592592" />
         <entry key="..\:/Users/Admin/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/item_hospital.xml" value="0.25" />
-        <entry key="..\:/Users/LAPTOP/OneDrive/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_man2.xml" value="0.1" />
-        <entry key="..\:/Users/LAPTOP/OneDrive/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_man3.xml" value="0.264" />
+        <entry key="..\:/Users/LAPTOP/OneDrive/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_camnangyte.xml" value="0.264" />
+        <entry key="..\:/Users/LAPTOP/OneDrive/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_chitiet.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/LAPTOP/OneDrive/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_home.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/LAPTOP/OneDrive/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_hososuckhoe.xml" value="0.25" />
+        <entry key="..\:/Users/LAPTOP/OneDrive/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_man1.xml" value="0.176" />
+        <entry key="..\:/Users/LAPTOP/OneDrive/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_man2.xml" value="0.264" />
+        <entry key="..\:/Users/LAPTOP/OneDrive/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_man3.xml" value="0.25263157894736843" />
+        <entry key="..\:/Users/LAPTOP/OneDrive/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_tu_van.xml" value="0.1403985507246377" />
+        <entry key="..\:/Users/LAPTOP/OneDrive/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/dialog_hosocanhanedit.xml" value="0.25" />
+        <entry key="..\:/Users/LAPTOP/OneDrive/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/Pc/Documents/GitHub/SOSKDIENTU/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2640625" />
         <entry key="..\:/Users/Pc/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_ab.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Pc/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/activity_ca_nhan.xml" value="0.1" />
@@ -72,7 +80,6 @@
         <entry key="..\:/Users/Pc/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/item_dangkytiemchung.xml" value="0.14221014492753623" />
         <entry key="..\:/Users/Pc/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/item_hosocanhan.xml" value="0.264" />
         <entry key="..\:/Users/Pc/Documents/GitHub/SOSKDIENTU/app/src/main/res/layout/item_hososuckhoe.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Pc/Documents/GitHub/SOSKDIENTU/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2703125" />
       </map>
     </option>
   </component>

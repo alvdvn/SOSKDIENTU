@@ -102,7 +102,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:text="Trong vòng 14 ngày có đi qua khu vực/lãnh  thổ nào không ? "
+        android:text="Trong vòng 14 ngày có đi qua khu vực/lãnh thổ nào không ? "
         tools:layout_editor_absoluteX="21dp"
         tools:layout_editor_absoluteY="516dp" />
 

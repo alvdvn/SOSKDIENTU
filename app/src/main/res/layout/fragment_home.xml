@@ -205,7 +205,7 @@
                         android:layout_height="match_parent"
 
                         android:gravity="center"
-                        android:text="Tue vấn từ xa" />
+                        android:text="Tư vấn từ xa" />
 
 
                     <TextView
