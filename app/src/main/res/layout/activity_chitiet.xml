@@ -27,135 +27,154 @@
         android:layout_width="match_parent"
         android:layout_height="700dp"
         android:orientation="vertical">
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="16pt"
-            android:text="Lich khám bệnh"
-            android:layout_gravity="center"/>
-        <TextView
-            android:id="@+id/tv_hvtct"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="12pt"
-            android:text="Họ và tên: "
-            />
-        <TextView
-            android:id="@+id/tv_cmndct"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="12pt"
-            android:text="Số CMND/CCCD: "
-            />
-        <TextView
-            android:id="@+id/tv_benhvienct"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="12pt"
-            android:text="Bệnh Viện "
-            />
-        <TextView
-            android:id="@+id/ngaykhamct"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="12pt"
-            android:text="Ngày khám: "
-            />
-        <TextView
-            android:id="@+id/giokhamct"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="12pt"
-            android:text="Giờ khám: "
-            />
-        <TextView
-            android:id="@+id/tv_trieuchungchitiet"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="12pt"
-            android:text="Triệu chúng: "
-            />
-        <LinearLayout
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="12pt"
-                android:text="BHYT: "
-                />
-            <CheckBox
-                android:layout_marginBottom="8dp"
-                android:id="@+id/cb_co"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:text="Có "
-                android:textColor="@color/black"
-                android:textSize="12pt"
-                android:textStyle="bold" />
-            <CheckBox
-                android:layout_marginBottom="8dp"
-                android:id="@+id/cb_ko"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:text="Không "
-                android:textColor="@color/black"
-                android:textSize="12pt"
-                android:textStyle="bold" />
+                android:orientation="vertical" >
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16pt"
+                    android:text="Lich khám bệnh"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/tv_hvtct"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="12pt"
+                    android:text="Họ và tên: "
+                    />
+                <TextView
+                    android:id="@+id/tv_cmndct"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="12pt"
+                    android:text="Số CMND/CCCD: "
+                    />
+                <TextView
+                    android:id="@+id/tv_benhvienct"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="12pt"
+                    android:text="Bệnh Viện "
+                    />
+                <TextView
+                    android:id="@+id/ngaykhamct"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="12pt"
+                    android:text="Ngày khám: "
+                    />
+                <TextView
+                    android:id="@+id/giokhamct"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="12pt"
+                    android:text="Giờ khám: "
+                    />
+                <TextView
+                    android:id="@+id/tv_trieuchungchitiet"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="12pt"
+                    android:text="Triệu chúng: "
+                    />
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="12pt"
+                        android:text="BHYT: "
+                        />
+                    <CheckBox
+                        android:layout_marginBottom="8dp"
+                        android:id="@+id/cb_co"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:text="Có "
+                        android:textColor="@color/black"
+                        android:textSize="12pt"
+                        android:textStyle="bold" />
+                    <CheckBox
+                        android:layout_marginBottom="8dp"
+                        android:id="@+id/cb_ko"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:text="Không "
+                        android:textColor="@color/black"
+                        android:textSize="12pt"
+                        android:textStyle="bold" />
 
 
 
-        </LinearLayout>
+                </LinearLayout>
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="353dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:hint="Lưu ý:Quý khách nhớ mang đày đủ giấy tờ
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="353dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Lưu ý:Quý khách nhớ mang đày đủ giấy tờ
          tùy thân và đến trươc 15 phút để xác nhận
           thông tin nếu đén muộn quá 15 phút, hệ thống sẽ tự động hủy lịch "
-            android:textColor="@color/black"
-            android:textSize="8pt"
-            android:textStyle="bold" />
+                    android:textColor="@color/black"
+                    android:textSize="8pt"
+                    android:textStyle="bold" />
 
-
+                <Button
+                    android:id="@+id/hoanthanh"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bogocbutton"
+                    android:text="Hoàn Thành"/>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
 

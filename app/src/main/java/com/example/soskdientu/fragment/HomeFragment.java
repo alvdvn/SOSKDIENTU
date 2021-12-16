@@ -29,6 +29,7 @@ import com.example.soskdientu.activity.khaibaoyte.man1;
 import com.example.soskdientu.activity.HomeActivity;
 import com.example.soskdientu.activity.TiemChung.PhanUngSauTiemActivity;
 import com.example.soskdientu.activity.tracuubaohiem.TracuubaohiemActivity;
+import com.example.soskdientu.activity.tuvantuxa.TuVanActivity;
 import com.example.soskdientu.model.CaNhan;
 import com.example.soskdientu.model.DangKyTiemChung;
 import com.example.soskdientu.model.HsSucKhoe;
@@ -44,7 +45,7 @@ import java.util.List;
 
 
 public class HomeFragment extends Fragment {
-    ImageView Khaibao,Hososk,datlich,mxnhan,camNang,chungnhan;
+    ImageView Khaibao,Hososk,datlich,mxnhan,camNang,chungnhan,tuvan;
     TextView hoten;
     View view;
     String sdt;
@@ -256,12 +257,22 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        tuvan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TuVanActivity.class);
+                intent.putExtra("sdt",sdt);
+                startActivity(intent);
+
+            }
+        });
 
         return view;
 
     }
 
     private void anhxa(){
+        tuvan = view.findViewById(R.id.tuvan);
         hsSucKhoeList = new ArrayList<>();
         hsSucKhoe = new HsSucKhoe();
         hoten = view.findViewById(R.id.tv_hvt);

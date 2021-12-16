@@ -48,7 +48,7 @@ Button btnluu;
                          || gt.getText().length() == 0 || scc.getText().length() == 0
                          || sbhyt.getText().length() == 0 || tht.getText().length() == 0|| thd.getText().length() == 0
                          || qt.getText().length() == 0|| tg.getText().length() == 0){
-                     Toast.makeText(getApplicationContext(), "Không để trống", Toast.LENGTH_SHORT).show();
+                     Toast.makeText(getApplicationContext(), "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                  }
              }catch(Exception e){
                  Log.e("Lỗi", "onClick: ",e );

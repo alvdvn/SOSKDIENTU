@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_layout"
+    tools:context=".activity.tuvantuxa.TuVanActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text=" Tư Vấn y tế từ xa"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="16pt"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:background="@drawable/bogoclayout"
+        android:layout_width="match_parent"
+        android:layout_height="666dp"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Để nhận được tư vấn từ Bác sỹ vui lòng liên hệ:"
+            android:layout_marginTop="50dp"
+            android:textSize="12pt"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Hotline: 0123456789"
+            android:layout_marginTop="50dp"
+            android:textSize="12pt"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Website: abc.gov.vn"
+            android:layout_marginTop="50dp"
+            android:textSize="12pt"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Fanpage: Facebook.com/01233545"
+            android:layout_marginTop="50dp"
+            android:textSize="12pt"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>

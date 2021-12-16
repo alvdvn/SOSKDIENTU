@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.soskdientu.R;
 import com.example.soskdientu.activity.CaNhanActivity;
+import com.example.soskdientu.activity.Dangnhap_Dawngky.LoginActivity;
 import com.example.soskdientu.activity.HomeActivity;
 import com.example.soskdientu.model.CaNhan;
 import com.example.soskdientu.model.Nguoidung;
@@ -37,13 +38,14 @@ import java.util.Stack;
 public class HoSoCaNhanFragment extends Fragment {
     EditText ht3,gt3,ns3,dc3,sdt13,scc3,sbhyt3,tht3,thd3,qt3,tg3;
     private FloatingActionButton btnAdd;
-    Button btnupdate1;
+    Button btnupdate1, btnlogout;
     View view;
     String sdt;
      TextView ht,dc,gt,ns,cc,sbhyt,tht,thd,qt,tg,sdt1;
      List<CaNhan> listcn;
     CaNhan caNhan;
     HomeActivity homeActivity ;
+    LoginActivity loginActivity;
     Button btnupdate;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -51,6 +53,7 @@ public class HoSoCaNhanFragment extends Fragment {
         view= inflater.inflate(R.layout.fragment_ho_so_ca_nhan, container, false);
         homeActivity = (HomeActivity) getActivity();
         sdt= homeActivity.getSdt1();
+//        loginActivity = (LoginActivity) getActivity();
         anhxa();
        getlistuser(sdt);
        btnupdate.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +76,7 @@ public class HoSoCaNhanFragment extends Fragment {
                 qt3=view.findViewById(R.id.et_quoctich3);
                 tg3=view.findViewById(R.id.et_tongiao3);
                 btnupdate1=view.findViewById(R.id.btnLuu3);
+
               btnupdate1.setOnClickListener(new View.OnClickListener() {
                   @Override
                   public void onClick(View v) {
@@ -94,13 +98,25 @@ public class HoSoCaNhanFragment extends Fragment {
 
                   }
               });
+
+           }
+       });
+       btnlogout.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(getActivity(), LoginActivity.class);
+               startActivity(intent);
+             homeActivity.finish();
+
            }
        });
         return view;
 
     }
     private  void  anhxa(){
+
         listcn = new ArrayList<>();
+        btnlogout = view.findViewById(R.id.btnlogout);
         sdt1 = view.findViewById(R.id.tv_sodienthoai1);
         ht=view.findViewById(R.id.tv_hoten1);
         ns=view.findViewById(R.id.tv_namsinh1);

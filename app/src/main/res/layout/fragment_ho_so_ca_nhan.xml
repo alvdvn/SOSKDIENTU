@@ -145,15 +145,32 @@
         android:layout_below="@+id/tv_quoctich"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-    <Button
-        android:layout_width="140dp"
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginLeft="130dp"
-        android:backgroundTint="#E48EED"
-        android:drawableLeft="@drawable/ic_baseline_save_24"
-        android:text="update"
-        android:id="@+id/btnupdate"/>
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+       >
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+
+
+            android:backgroundTint="#E48EED"
+            android:drawableLeft="@drawable/ic_baseline_save_24"
+            android:text="update"
+            android:id="@+id/btnupdate"/>
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+           android:layout_marginLeft="30dp"
+
+            android:backgroundTint="#E48EED"
+            android:drawableLeft="@drawable/ic_baseline_cancel_24"
+            android:text="Logout"
+            android:id="@+id/btnlogout"/>
+    </LinearLayout>
 </LinearLayout>
 
 

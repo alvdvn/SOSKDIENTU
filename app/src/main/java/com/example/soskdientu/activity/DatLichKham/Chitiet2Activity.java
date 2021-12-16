@@ -8,11 +8,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.soskdientu.R;
+import com.example.soskdientu.activity.HomeActivity;
 import com.example.soskdientu.adapter.LichkhamAdapter;
 import com.example.soskdientu.model.DatLichKham;
 import com.google.firebase.database.DataSnapshot;
@@ -27,6 +30,7 @@ import java.util.List;
 public class Chitiet2Activity extends AppCompatActivity {
     TextView hoten,cmnd,ngaykham,giokham,trieuchung,benhvien;
     CheckBox co,khong;
+
     List<DatLichKham> listlk;
     String sdt,ngaykham1;
 
@@ -38,10 +42,11 @@ public class Chitiet2Activity extends AppCompatActivity {
         listlk = new ArrayList<>();
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
-        sdt=bundle.getString("sdt");
-        ngaykham1 =  bundle.getString("date");
+        sdt = bundle.getString("sdt");
+        ngaykham1 = bundle.getString("date");
 
-        getlistlk(sdt,ngaykham1);
+        getlistlk(sdt, ngaykham1);
+
     }
     private void anhxa(){
 

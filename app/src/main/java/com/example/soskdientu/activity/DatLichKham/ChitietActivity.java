@@ -4,15 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.example.soskdientu.R;
+import com.example.soskdientu.activity.HomeActivity;
 
 public class ChitietActivity extends AppCompatActivity {
     TextView hoten,cmnd,ngaykham,giokham,trieuchung,bẹnhvien;
     CheckBox co,khong;
     String hoten1,cmnd1,ngaykham1,giokham1,trieuchung1,sdt,bhyt,tenbv;
+    Button ht;
 
 
     @Override
@@ -32,12 +36,20 @@ public class ChitietActivity extends AppCompatActivity {
         }else{
             khong.setChecked(true);
         }
-
+        ht.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(ChitietActivity.this, HomeActivity.class);
+                intent1.putExtra("sdt",sdt);
+                startActivity(intent1);
+            }
+        });
 
 
     }
 
     private void anhxa(){
+        ht = findViewById(R.id.hoanthanh);
         hoten=findViewById(R.id.tv_hvtct);
         cmnd = findViewById(R.id.tv_cmndct);
         bẹnhvien = findViewById(R.id.tv_benhvienct);

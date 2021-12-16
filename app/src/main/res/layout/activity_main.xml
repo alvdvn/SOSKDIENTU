@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerVertical="false"
-    android:background="@drawable/background_layout"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".activity.ChaoActivity">
+    tools:context=".activity.ChaoActivity"
+    android:background="@drawable/chao">
 
 
 
