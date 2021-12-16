@@ -6,22 +6,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@drawable/background_layout"
     tools:context=".activity.khaibaoyte.man1">
 
     <Button
         android:id="@+id/btnKhaibao"
-        android:layout_width="144dp"
-        android:layout_height="88dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         android:text="Khai Báo Y Tế"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="133dp"
         tools:layout_editor_absoluteY="194dp" />
 
     <Button
         android:layout_marginTop="100dp"
         android:id="@+id/btnChitiet"
-        android:layout_width="143dp"
-        android:layout_height="96dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         android:text="Chi Tiết "
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="133dp"
         tools:layout_editor_absoluteY="394dp" />
 </LinearLayout>
